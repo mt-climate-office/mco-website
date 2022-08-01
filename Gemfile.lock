@@ -255,10 +255,13 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  github-pages (~> 227)
+  github-pages
   http_parser.rb (~> 0.6.0)
-  jekyll-feed (~> 0.12)
+  jekyll-feed
   jekyll-include-cache
+  jekyll-paginate
+  jekyll-seo-tag
+  jekyll-sitemap
   tzinfo (~> 1.2)
   tzinfo-data
   wdm (~> 0.1.1)

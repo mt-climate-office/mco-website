@@ -1,0 +1,22 @@
+# main links
+main:
+  - title: "Montana Mesonet"
+    url: /mesonet/
+  - title: "Drought"
+    url: /drought/
+  - title: "Climate"
+    url: /climate/
+  - title: "Research"
+    url: /research/
+  - title: "About"
+    url: /about/
+
+mesonet-sidebar:
+  - title: " "
+    children: 
+      - title: "Montana Mesonet Overview"
+        url: /mesonet/
+      - title: "Montana Mesonet API"
+        url: /mesonet/api/
+      - title: "Montana Mesonet Dashboard"
+        url: /mesonet/dashboard/
