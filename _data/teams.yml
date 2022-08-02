@@ -1,0 +1,14 @@
+- name: "Climatologists"
+  short: "clim"
+
+- name: "Mesonet"
+  short: "mes"
+
+- name: "Research & IT"
+  short: "it"
+
+- name: "Graduate Students"
+  short: "grad"
+
+- name: "Interns"
+  short: "int"

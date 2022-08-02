@@ -20,3 +20,17 @@ mesonet-sidebar:
         url: /mesonet/api/
       - title: "Montana Mesonet Dashboard"
         url: /mesonet/dashboard/
+
+about-sidebar:
+  - title: " "
+    children: 
+      - title: "About"
+        url: /about/
+      - title: "MCO Team"
+        url: /about/team/
+      - title: "History"
+        url: /about/history/
+      - title: "Partnerships"
+        url: /about/partnerships/
+      - title: "User Agreement"
+        url: /about/agreement/

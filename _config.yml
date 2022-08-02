@@ -94,7 +94,7 @@ footer:
       icon: "fab fa-fw fa-github"
       url: "https://github.com/mt-climate-office"
     - label: "Email"
-      icon: "fab fa-fw fa-envelope"
+      icon: "fas fa-fw fa-envelope-square"
       url: "mailto:state.climatologist@umontana.edu"
 
 defaults:
