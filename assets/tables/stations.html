@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.dataTables.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/fixedheader/3.1.9/css/fixedHeader.dataTables.min.css" />
+
+
+    <style>
+        body {
+            font: 90%/1.45em "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif !important;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #fff;
+            position: relative;
+            padding-bottom: 220px !important;
+            height: auto !important;
+            min-height: 100%;
+            box-sizing: border-box;
+            -webkit-font-smoothing: inherit
+        }
+
+        .table,
+        #myTable {
+            width: 100vw;
+        }
+
+        /* The switch - the box around the slider */
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 30px;
+            height: 17px;
+            top: 50%;
+        }
+
+        /* Hide default HTML checkbox */
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        /* The slider */
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .2s;
+            transition: .2s;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 13px;
+            width: 13px;
+            left: 2px;
+            bottom: 2px;
+            background-color: white;
+            -webkit-transition: .2s;
+            transition: .2s;
+        }
+
+        input:checked+.slider {
+            background-color: #2196F3;
+        }
+
+        input:checked+.slider:before {
+            -webkit-transform: translateX(13px);
+            -ms-transform: translateX(13px);
+            transform: translateX(13px);
+        }
+
+        /* Rounded sliders */
+        .slider.round {
+            border-radius: 20px;
+        }
+
+        .slider.round:before {
+            border-radius: 50%;
+        }
+
+        .dataTables_filter {
+            float: left !important;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Rounded switch -->
+<!--
+    <label class="switch">
+        <input type="checkbox" id="showAll">
+        <span class="slider round"></span>
+    </label> Show all stations/variables
+-->
+
+    <table border="0" class="dataframe display" id="myTable">
+  <thead>
+    <tr style="text-align: left;">
+      <th>station</th>
+      <th>name</th>
+      <th>date_installed</th>
+      <th>sub_network</th>
+      <th>longitude</th>
+      <th>latitude</th>
+      <th>elevation</th>
+      <th>mesowest_id</th>
+      <th>gwic_id</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>aceabsar</td>
+      <td>Absarokee</td>
+      <td>2021-07-11</td>
+      <td>HydroMet</td>
+      <td>-109.61</td>
+      <td>45.56</td>
+      <td>1400.40</td>
+      <td>None</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>acebozem</td>
+      <td>Bozeman</td>
+      <td>2021-05-13</td>
+      <td>HydroMet</td>
+      <td>-111.07</td>
+      <td>45.66</td>
+      <td>1495.09</td>
+      <td>None</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>acebroad</td>
+      <td>Broadview</td>
+      <td>2021-08-15</td>
+      <td>HydroMet</td>
+      <td>-108.76</td>
+      <td>46.13</td>
+      <td>1239.41</td>
+      <td>None</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>acecrowa</td>
+      <td>Crow Agency</td>
+      <td>2021-09-16</td>
+      <td>HydroMet</td>
+      <td>-107.44</td>
+      <td>45.59</td>
+      <td>939.58</td>
+      <td>None</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>acehavre</td>
+      <td>Havre</td>
+      <td>2021-07-02</td>
+      <td>HydroMet</td>
+      <td>-109.80</td>
+      <td>48.49</td>
+      <td>830.99</td>
+      <td>None</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>aceingom</td>
+      <td>Ingomar</td>
+      <td>2021-08-12</td>
+      <td>HydroMet</td>
+      <td>-107.22</td>
+      <td>46.66</td>
+      <td>939.56</td>
+      <td>None</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>acemelvi</td>
+      <td>Melville</td>
+      <td>2021-09-15</td>
+      <td>HydroMet</td>
+      <td>-109.84</td>
+      <td>46.00</td>
+      <td>1430.15</td>
+      <td>None</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>acemiles</td>
+      <td>Miles City</td>
+      <td>2021-08-25</td>
+      <td>HydroMet</td>
+      <td>-105.95</td>
+      <td>46.41</td>
+      <td>818.85</td>
+      <td>None</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>acemocca</td>
+      <td>Moccasin</td>
+      <td>2021-06-06</td>
+      <td>HydroMet</td>
+      <td>-109.95</td>
+      <td>47.06</td>
+      <td>1294.77</td>
+      <td>None</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>aceround</td>
+      <td>Roundup</td>
+      <td>2021-06-10</td>
+      <td>HydroMet</td>
+      <td>-108.42</td>
+      <td>46.58</td>
+      <td>1047.34</td>
+      <td>None</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>acesidne</td>
+      <td>Sidney</td>
+      <td>2021-09-12</td>
+      <td>HydroMet</td>
+      <td>-104.25</td>
+      <td>47.78</td>
+      <td>688.50</td>
+      <td>None</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>arskeogh</td>
+      <td>Fort Keogh N</td>
+      <td>2017-06-26</td>
+      <td>AgriMet</td>
+      <td>-105.95</td>
+      <td>46.41</td>
+      <td>818.85</td>
+      <td>MTM23</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>arskeose</td>
+      <td>Fort Keogh SE</td>
+      <td>2018-06-19</td>
+      <td>AgriMet</td>
+      <td>-105.83</td>
+      <td>46.35</td>
+      <td>746.04</td>
+      <td>MTM25</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>arskeosw</td>
+      <td>Fort Keogh SW</td>
+      <td>2018-06-26</td>
+      <td>AgriMet</td>
+      <td>-105.98</td>
+      <td>46.30</td>
+      <td>849.20</td>
+      <td>MTM26</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>bentlake</td>
+      <td>Benton Lake W</td>
+      <td>2017-07-01</td>
+      <td>AgriMet</td>
+      <td>-111.47</td>
+      <td>47.69</td>
+      <td>1129.44</td>
+      <td>MTM21</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>blm1arge</td>
+      <td>Argenta</td>
+      <td>2017-08-18</td>
+      <td>AgriMet</td>
+      <td>-112.88</td>
+      <td>45.25</td>
+      <td>1898.93</td>
+      <td>MTM14</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>blm2virg</td>
+      <td>Virginia City</td>
+      <td>2017-08-23</td>
+      <td>AgriMet</td>
+      <td>-111.88</td>
+      <td>45.27</td>
+      <td>2238.82</td>
+      <td>MTM17</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>blm3mcca</td>
+      <td>McCartney Mtn</td>
+      <td>2017-08-20</td>
+      <td>AgriMet</td>
+      <td>-112.60</td>
+      <td>45.55</td>
+      <td>1850.71</td>
+      <td>MTM18</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>blm5kidd</td>
+      <td>Kidd</td>
+      <td>2017-10-02</td>
+      <td>AgriMet</td>
+      <td>-112.72</td>
+      <td>44.81</td>
+      <td>1905.70</td>
+      <td>MTM16</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>blmangel</td>
+      <td>Angela</td>
+      <td>2021-10-13</td>
+      <td>AgriMet</td>
+      <td>-106.59</td>
+      <td>46.70</td>
+      <td>954.06</td>
+      <td>MTM89</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>blmbattl</td>
+      <td>Battle Creek</td>
+      <td>2018-08-21</td>
+      <td>AgriMet</td>
+      <td>-103.78</td>
+      <td>45.07</td>
+      <td>988.09</td>
+      <td>MTM30</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>blmbelfr</td>
+      <td>Belfry E</td>
+      <td>2018-09-28</td>
+      <td>AgriMet</td>
+      <td>-108.90</td>
+      <td>45.18</td>
+      <td>1194.85</td>
+      <td>MTM31</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>blmbroad</td>
+      <td>Broadus</td>
+      <td>2018-08-11</td>
+      <td>AgriMet</td>
+      <td>-105.36</td>
+      <td>45.44</td>
+      <td>961.55</td>
+      <td>MTM32</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>blmcapit</td>
+      <td>Capitol</td>
+      <td>2018-08-13</td>
+      <td>AgriMet</td>
+      <td>-104.14</td>
+      <td>45.32</td>
+      <td>1003.48</td>
+      <td>MTM33</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>blmfortp</td>
+      <td>Fort Peck</td>
+      <td>2021-10-13</td>
+      <td>AgriMet</td>
+      <td>-106.15</td>
+      <td>47.74</td>
+      <td>797.19</td>
+      <td>MTM87</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>blmglend</td>
+      <td>Glendive</td>
+      <td>2018-06-25</td>
+      <td>AgriMet</td>
+      <td>-104.75</td>
+      <td>46.92</td>
+      <td>707.35</td>
+      <td>MTM28</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>blmglnor</td>
+      <td>Vandalia N</td>
+      <td>2018-10-10</td>
+      <td>AgriMet</td>
+      <td>-106.91</td>
+      <td>48.51</td>
+      <td>790.51</td>
+      <td>MTM34</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>blmhardi</td>
+      <td>Harding Cutoff</td>
+      <td>2018-08-21</td>
+      <td>AgriMet</td>
+      <td>-103.73</td>
+      <td>45.17</td>
+      <td>982.06</td>
+      <td>MTM36</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>blmhavre</td>
+      <td>Cherry Ridge</td>
+      <td>2018-10-07</td>
+      <td>AgriMet</td>
+      <td>-109.05</td>
+      <td>48.87</td>
+      <td>921.77</td>
+      <td>MTM37</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>blmjorda</td>
+      <td>Jordan</td>
+      <td>2021-10-13</td>
+      <td>AgriMet</td>
+      <td>-106.49</td>
+      <td>47.35</td>
+      <td>761.35</td>
+      <td>MTM88</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>blmmatad</td>
+      <td>Zortman E</td>
+      <td>2018-10-13</td>
+      <td>AgriMet</td>
+      <td>-108.32</td>
+      <td>47.89</td>
+      <td>943.82</td>
+      <td>MTM38</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>blmplevn</td>
+      <td>Plevna</td>
+      <td>2018-08-20</td>
+      <td>AgriMet</td>
+      <td>-104.43</td>
+      <td>46.44</td>
+      <td>922.31</td>
+      <td>MTM39</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>blmpumpk</td>
+      <td>Pumpkin Creek</td>
+      <td>2018-08-09</td>
+      <td>AgriMet</td>
+      <td>-105.70</td>
+      <td>46.20</td>
+      <td>830.59</td>
+      <td>MTM40</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>blmround</td>
+      <td>Roundup NW</td>
+      <td>2018-09-25</td>
+      <td>AgriMet</td>
+      <td>-108.74</td>
+      <td>46.58</td>
+      <td>1106.22</td>
+      <td>MTM41</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>blmroyno</td>
+      <td>Roy</td>
+      <td>2019-08-07</td>
+      <td>AgriMet</td>
+      <td>-108.95</td>
+      <td>47.49</td>
+      <td>936.41</td>
+      <td>MTM42</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>blmterry</td>
+      <td>Terry</td>
+      <td>2018-06-26</td>
+      <td>AgriMet</td>
+      <td>-105.26</td>
+      <td>46.84</td>
+      <td>707.38</td>
+      <td>MTM29</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>blmwarre</td>
+      <td>Warren E</td>
+      <td>2018-09-27</td>
+      <td>AgriMet</td>
+      <td>-108.44</td>
+      <td>45.04</td>
+      <td>1594.16</td>
+      <td>MTM43</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>bozmtest</td>
+      <td>Bozeman Test</td>
+      <td>2021-10-01</td>
+      <td>AgriMet</td>
+      <td>-111.07</td>
+      <td>45.66</td>
+      <td>1494.90</td>
+      <td>None</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>conradmt</td>
+      <td>Conrad</td>
+      <td>2016-10-20</td>
+      <td>AgriMet</td>
+      <td>-111.93</td>
+      <td>48.31</td>
+      <td>1132.03</td>
+      <td>MTM05</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>corvalli</td>
+      <td>Corvallis</td>
+      <td>2016-09-30</td>
+      <td>AgriMet</td>
+      <td>-114.09</td>
+      <td>46.33</td>
+      <td>1093.71</td>
+      <td>MTM04</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>crowagen</td>
+      <td>Crow Agency E</td>
+      <td>2017-04-19</td>
+      <td>AgriMet</td>
+      <td>-107.44</td>
+      <td>45.59</td>
+      <td>939.56</td>
+      <td>MTM13</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>ebarllob</td>
+      <td>Clearwater SW</td>
+      <td>2016-11-21</td>
+      <td>AgriMet</td>
+      <td>-113.37</td>
+      <td>46.96</td>
+      <td>1181.00</td>
+      <td>MTM08</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>ekalakas</td>
+      <td>Ekalaka SE</td>
+      <td>2020-10-14</td>
+      <td>AgriMet</td>
+      <td>-104.34</td>
+      <td>45.71</td>
+      <td>972.42</td>
+      <td>MTM93</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>ftbentcb</td>
+      <td>Fort Benton E</td>
+      <td>2017-09-13</td>
+      <td>AgriMet</td>
+      <td>-110.48</td>
+      <td>47.79</td>
+      <td>988.71</td>
+      <td>MTM02</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>havrenmt</td>
+      <td>Havre</td>
+      <td>2016-10-21</td>
+      <td>AgriMet</td>
+      <td>-109.80</td>
+      <td>48.49</td>
+      <td>827.06</td>
+      <td>MTM06</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>huntleys</td>
+      <td>Huntley</td>
+      <td>2016-10-27</td>
+      <td>AgriMet</td>
+      <td>-108.23</td>
+      <td>45.92</td>
+      <td>923.95</td>
+      <td>MTM11</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>kalispel</td>
+      <td>Kalispell E</td>
+      <td>2016-09-29</td>
+      <td>AgriMet</td>
+      <td>-114.14</td>
+      <td>48.19</td>
+      <td>900.52</td>
+      <td>MTM03</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>lololowr</td>
+      <td>Lolo Lower</td>
+      <td>2016-09-22</td>
+      <td>AgriMet</td>
+      <td>-114.13</td>
+      <td>46.75</td>
+      <td>998.00</td>
+      <td>MTM01</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>lomawood</td>
+      <td>Loma S</td>
+      <td>2018-07-26</td>
+      <td>AgriMet</td>
+      <td>-110.53</td>
+      <td>47.89</td>
+      <td>851.66</td>
+      <td>MTM45</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>lubrecht</td>
+      <td>Lubrecht Forest</td>
+      <td>2017-06-16</td>
+      <td>AgriMet</td>
+      <td>-113.44</td>
+      <td>46.89</td>
+      <td>1241.85</td>
+      <td>MTM12</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>mbmgtech</td>
+      <td>MT Tech</td>
+      <td>2018-09-15</td>
+      <td>AgriMet</td>
+      <td>-112.56</td>
+      <td>46.01</td>
+      <td>1774.35</td>
+      <td>MTM46</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>mdabench</td>
+      <td>Benchland NE</td>
+      <td>2019-04-29</td>
+      <td>AgriMet</td>
+      <td>-109.97</td>
+      <td>47.09</td>
+      <td>1293.54</td>
+      <td>MTM47</td>
+      <td>133047</td>
+    </tr>
+    <tr>
+      <td>mdabigsa</td>
+      <td>Big Sandy SW</td>
+      <td>2021-10-15</td>
+      <td>AgriMet</td>
+      <td>-110.33</td>
+      <td>48.10</td>
+      <td>888.29</td>
+      <td>MTM90</td>
+      <td>316561</td>
+    </tr>
+    <tr>
+      <td>mdacasca</td>
+      <td>Cascade E</td>
+      <td>2019-10-22</td>
+      <td>AgriMet</td>
+      <td>-111.62</td>
+      <td>47.28</td>
+      <td>1034.38</td>
+      <td>MTM76</td>
+      <td>286443</td>
+    </tr>
+    <tr>
+      <td>mdacharl</td>
+      <td>Charlo Heights</td>
+      <td>2019-10-25</td>
+      <td>AgriMet</td>
+      <td>-114.17</td>
+      <td>46.16</td>
+      <td>1122.91</td>
+      <td>MTM77</td>
+      <td>286442</td>
+    </tr>
+    <tr>
+      <td>mdachine</td>
+      <td>Chinook E</td>
+      <td>2018-10-06</td>
+      <td>AgriMet</td>
+      <td>-109.16</td>
+      <td>48.58</td>
+      <td>729.61</td>
+      <td>MTM48</td>
+      <td>286445</td>
+    </tr>
+    <tr>
+      <td>mdachote</td>
+      <td>Choteau NE</td>
+      <td>2019-04-29</td>
+      <td>AgriMet</td>
+      <td>-112.09</td>
+      <td>47.89</td>
+      <td>1152.33</td>
+      <td>MTM49</td>
+      <td>213965</td>
+    </tr>
+    <tr>
+      <td>mdadillo</td>
+      <td>Dillon NE</td>
+      <td>2019-09-25</td>
+      <td>AgriMet</td>
+      <td>-112.59</td>
+      <td>45.25</td>
+      <td>1534.87</td>
+      <td>MTM70</td>
+      <td>213964</td>
+    </tr>
+    <tr>
+      <td>mdaedgar</td>
+      <td>Edgar E</td>
+      <td>2019-05-29</td>
+      <td>AgriMet</td>
+      <td>-108.86</td>
+      <td>45.46</td>
+      <td>1058.97</td>
+      <td>MTM50</td>
+      <td>122340</td>
+    </tr>
+    <tr>
+      <td>mdafroid</td>
+      <td>Froid NE</td>
+      <td>2019-10-03</td>
+      <td>AgriMet</td>
+      <td>-104.48</td>
+      <td>48.35</td>
+      <td>627.60</td>
+      <td>MTM81</td>
+      <td>235081</td>
+    </tr>
+    <tr>
+      <td>mdagildf</td>
+      <td>Gildford N</td>
+      <td>2019-07-03</td>
+      <td>AgriMet</td>
+      <td>-110.28</td>
+      <td>48.70</td>
+      <td>854.22</td>
+      <td>MTM51</td>
+      <td>213968</td>
+    </tr>
+    <tr>
+      <td>mdaglasw</td>
+      <td>Glasgow W</td>
+      <td>2019-10-02</td>
+      <td>AgriMet</td>
+      <td>-106.72</td>
+      <td>48.23</td>
+      <td>638.99</td>
+      <td>MTM72</td>
+      <td>213969</td>
+    </tr>
+    <tr>
+      <td>mdahardi</td>
+      <td>Hardin N</td>
+      <td>2019-10-17</td>
+      <td>AgriMet</td>
+      <td>-107.60</td>
+      <td>45.87</td>
+      <td>863.58</td>
+      <td>MTM75</td>
+      <td>236086</td>
+    </tr>
+    <tr>
+      <td>mdahogel</td>
+      <td>Hogeland SE</td>
+      <td>2018-10-09</td>
+      <td>AgriMet</td>
+      <td>-108.56</td>
+      <td>48.77</td>
+      <td>950.50</td>
+      <td>MTM52</td>
+      <td>121258</td>
+    </tr>
+    <tr>
+      <td>mdaledge</td>
+      <td>Ledger N</td>
+      <td>2019-10-10</td>
+      <td>AgriMet</td>
+      <td>-111.82</td>
+      <td>48.34</td>
+      <td>1047.42</td>
+      <td>MTM73</td>
+      <td>121215</td>
+    </tr>
+    <tr>
+      <td>mdamalta</td>
+      <td>Malta W</td>
+      <td>2018-09-20</td>
+      <td>AgriMet</td>
+      <td>-108.00</td>
+      <td>48.35</td>
+      <td>688.80</td>
+      <td>MTM69</td>
+      <td>235919</td>
+    </tr>
+    <tr>
+      <td>mdamanha</td>
+      <td>Manhattan S</td>
+      <td>2019-09-26</td>
+      <td>AgriMet</td>
+      <td>-111.32</td>
+      <td>45.79</td>
+      <td>1329.22</td>
+      <td>MTM71</td>
+      <td>286439</td>
+    </tr>
+    <tr>
+      <td>mdamiles</td>
+      <td>Miles City S</td>
+      <td>2019-10-16</td>
+      <td>AgriMet</td>
+      <td>-105.76</td>
+      <td>46.22</td>
+      <td>749.28</td>
+      <td>MTM74</td>
+      <td>236367</td>
+    </tr>
+    <tr>
+      <td>mdamoies</td>
+      <td>Moiese N</td>
+      <td>2020-06-16</td>
+      <td>AgriMet</td>
+      <td>-114.26</td>
+      <td>47.42</td>
+      <td>867.14</td>
+      <td>MTM79</td>
+      <td>216984</td>
+    </tr>
+    <tr>
+      <td>mdaoilmo</td>
+      <td>Oilmont E</td>
+      <td>2019-06-24</td>
+      <td>AgriMet</td>
+      <td>-111.60</td>
+      <td>48.78</td>
+      <td>1087.91</td>
+      <td>MTM53</td>
+      <td>286440</td>
+    </tr>
+    <tr>
+      <td>mdapower</td>
+      <td>Power S</td>
+      <td>2019-04-29</td>
+      <td>AgriMet</td>
+      <td>-111.71</td>
+      <td>47.66</td>
+      <td>1132.73</td>
+      <td>MTM54</td>
+      <td>122338</td>
+    </tr>
+    <tr>
+      <td>mdascoby</td>
+      <td>Scobey N</td>
+      <td>2019-10-02</td>
+      <td>AgriMet</td>
+      <td>-105.44</td>
+      <td>48.88</td>
+      <td>730.33</td>
+      <td>MTM78</td>
+      <td>214376</td>
+    </tr>
+    <tr>
+      <td>mdatost2</td>
+      <td>Toston SW2</td>
+      <td>2021-04-21</td>
+      <td>AgriMet</td>
+      <td>-111.54</td>
+      <td>46.11</td>
+      <td>1233.38</td>
+      <td>MTM83</td>
+      <td>314258</td>
+    </tr>
+    <tr>
+      <td>mdatwinb</td>
+      <td>Twin Bridges S</td>
+      <td>2019-05-22</td>
+      <td>AgriMet</td>
+      <td>-112.36</td>
+      <td>45.47</td>
+      <td>1448.64</td>
+      <td>MTM56</td>
+      <td>262226</td>
+    </tr>
+    <tr>
+      <td>moccasin</td>
+      <td>Moccasin</td>
+      <td>2016-12-19</td>
+      <td>AgriMet</td>
+      <td>-109.95</td>
+      <td>47.06</td>
+      <td>1294.77</td>
+      <td>MTM09</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>moltwest</td>
+      <td>Molt W</td>
+      <td>2017-10-19</td>
+      <td>AgriMet</td>
+      <td>-109.09</td>
+      <td>45.82</td>
+      <td>1270.41</td>
+      <td>MTM20</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>namlower</td>
+      <td>Hot Springs NE Lower</td>
+      <td>2018-07-30</td>
+      <td>AgriMet</td>
+      <td>-114.51</td>
+      <td>47.70</td>
+      <td>1039.82</td>
+      <td>MTM57</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>namupper</td>
+      <td>Hot Springs NE Upper</td>
+      <td>2018-07-31</td>
+      <td>AgriMet</td>
+      <td>-114.54</td>
+      <td>47.72</td>
+      <td>1524.73</td>
+      <td>MTM58</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>nctbirne</td>
+      <td>Birney N</td>
+      <td>2021-06-19</td>
+      <td>AgriMet</td>
+      <td>-106.58</td>
+      <td>45.45</td>
+      <td>1281.88</td>
+      <td>MTM92</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>nctbusby</td>
+      <td>Busby N</td>
+      <td>2021-06-18</td>
+      <td>AgriMet</td>
+      <td>-106.95</td>
+      <td>45.64</td>
+      <td>1220.14</td>
+      <td>MTM91</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>pvbrisbi</td>
+      <td>Brisbin</td>
+      <td>2021-09-21</td>
+      <td>AgriMet</td>
+      <td>-110.61</td>
+      <td>45.53</td>
+      <td>1431.07</td>
+      <td>MTM84</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>pvcarbel</td>
+      <td>Carbella N</td>
+      <td>2021-09-24</td>
+      <td>AgriMet</td>
+      <td>-110.88</td>
+      <td>45.28</td>
+      <td>1772.31</td>
+      <td>MTM85</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>pvemigra</td>
+      <td>Emigrant E</td>
+      <td>2021-09-24</td>
+      <td>AgriMet</td>
+      <td>-110.68</td>
+      <td>45.35</td>
+      <td>1625.21</td>
+      <td>MTM86</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>raplejen</td>
+      <td>Rapleje N</td>
+      <td>2017-06-20</td>
+      <td>AgriMet</td>
+      <td>-109.24</td>
+      <td>46.04</td>
+      <td>1269.39</td>
+      <td>MTM19</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>reedpoin</td>
+      <td>Reed Point NE</td>
+      <td>2017-10-20</td>
+      <td>AgriMet</td>
+      <td>-109.43</td>
+      <td>45.80</td>
+      <td>1295.79</td>
+      <td>MTM22</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>sevnoner</td>
+      <td>Ingomar NE</td>
+      <td>2016-10-27</td>
+      <td>AgriMet</td>
+      <td>-107.22</td>
+      <td>46.66</td>
+      <td>939.56</td>
+      <td>MTM59</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>sidneymt</td>
+      <td>Sidney</td>
+      <td>2016-10-25</td>
+      <td>AgriMet</td>
+      <td>-104.25</td>
+      <td>47.78</td>
+      <td>688.48</td>
+      <td>MTM10</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>turekran</td>
+      <td>Coffee Creek N</td>
+      <td>2016-11-08</td>
+      <td>AgriMet</td>
+      <td>-110.13</td>
+      <td>47.39</td>
+      <td>1132.15</td>
+      <td>MTM15</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>usfsmacp</td>
+      <td>MacDonald Pass</td>
+      <td>2018-11-16</td>
+      <td>AgriMet</td>
+      <td>-112.31</td>
+      <td>46.56</td>
+      <td>1939.15</td>
+      <td>MTM68</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>whitshaw</td>
+      <td>Whitefish N</td>
+      <td>2018-07-23</td>
+      <td>AgriMet</td>
+      <td>-114.44</td>
+      <td>48.48</td>
+      <td>918.38</td>
+      <td>MTM60</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>wrsround</td>
+      <td>Roundup NE</td>
+      <td>2018-10-18</td>
+      <td>AgriMet</td>
+      <td>-108.42</td>
+      <td>46.58</td>
+      <td>1047.34</td>
+      <td>MTM61</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>wsrabsaw</td>
+      <td>Absarokee W</td>
+      <td>2018-09-19</td>
+      <td>AgriMet</td>
+      <td>-109.61</td>
+      <td>45.56</td>
+      <td>1400.40</td>
+      <td>MTM62</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>wsrbigtm</td>
+      <td>Big Timber SE</td>
+      <td>2019-07-02</td>
+      <td>AgriMet</td>
+      <td>-109.83</td>
+      <td>45.74</td>
+      <td>1335.29</td>
+      <td>MTM63</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>wsrboydw</td>
+      <td>Cooney Reservoir W</td>
+      <td>2018-09-21</td>
+      <td>AgriMet</td>
+      <td>-109.26</td>
+      <td>45.47</td>
+      <td>1429.65</td>
+      <td>MTM64</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>wsrbroad</td>
+      <td>Broadview E</td>
+      <td>2018-09-30</td>
+      <td>AgriMet</td>
+      <td>-108.76</td>
+      <td>46.13</td>
+      <td>1239.41</td>
+      <td>MTM65</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>wsrmelvi</td>
+      <td>Melville SE</td>
+      <td>2019-07-03</td>
+      <td>AgriMet</td>
+      <td>-109.84</td>
+      <td>46.00</td>
+      <td>1430.15</td>
+      <td>MTM66</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+    <tr>
+      <td>wsrreeds</td>
+      <td>Reed Point S</td>
+      <td>2018-09-18</td>
+      <td>AgriMet</td>
+      <td>-109.56</td>
+      <td>45.61</td>
+      <td>1429.43</td>
+      <td>MTM67</td>
+      <td>&lt;NA&gt;</td>
+    </tr>
+  </tbody>
+</table>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/fixedheader/3.1.9/js/dataTables.fixedHeader.min.js"></script>
+
+    <!-- STATUS SCRIPT -->
+    <script>
+        $(document).ready(function() {
+
+            var tab = $('#myTable')
+                .addClass('nowrap')
+                .DataTable( {
+                    responsive: true,
+                    fixedHeader: true,
+                    paging: false,
+                    info: false,
+                    language: {
+                        search: ''
+                    }
+                } );
+
+            //        document.getElementById('statusTable').style.width = "100vw"
+            tab.columns.adjust().draw()
+            document.getElementById('myTable').style.width = "100%"
+
+            tab.responsive.rebuild();
+            tab.responsive.recalc();
+        });
+
+    </script>
+
+</body>
+
+</html>

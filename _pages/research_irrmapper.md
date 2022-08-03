@@ -21,7 +21,7 @@ Our maps are available on Google Earth Engine and are free to use under the [Cre
 
 This research was primarily funded by the National Science Foundation under Grant No. 1633831, the University of Montana BRIDGES Fellowship. Additional funding was provided by the Montana Climate Office and the [OpenET project](https://etdata.org/).
 
-{% include image.html url="assets/images/irrmapper_1.png" description="Figure 1: Training data from the irrigated class used to train IrrMapper." %}
+{% include image.html url="assets/images/irrmapper_1.png" description="Figure 1: Training data from the irrigated class used to train IrrMapper." external='false' %}
 
 {% include image.html url="assets/images/irrmapper_2.png" description="Figure 2: Training data from the unirrigated classes used to train IrrMapper (i.e., wetlands, dryland agriculture, and uncultivated lands)." %}
 

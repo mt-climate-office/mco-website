@@ -1,4 +1,11 @@
+{% if include.external %}
+<figure class="image">
+    <img src="{{ include.url }}" alt="{{ include.description }}">
+    <figcaption>{{ include.description }}</figcaption>
+</figure>
+{% else %}
 <figure class="image">
     <img src="{{ site.url }}{{ site.baseurl }}/{{ include.url }}" alt="{{ include.description }}">
     <figcaption>{{ include.description }}</figcaption>
 </figure>
+{% endif %}
