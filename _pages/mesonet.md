@@ -3,8 +3,6 @@ layout: single
 permalink: /mesonet/
 title: "Montana Mesonet"
 header:
-  overlay_color: "#000"
-  overlay_filter: "0.5"
   overlay_image: /assets/images/mesonet_banner.jpg
 excerpt: " <br />"
 classes: wide

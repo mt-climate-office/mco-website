@@ -4,8 +4,8 @@ main:
     url: /mesonet/
   - title: "Drought"
     url: /drought/
-  - title: "Climate"
-    url: /climate/
+  - title: "Projects"
+    url: /projects/
   - title: "Research"
     url: /research/
   - title: "About"
@@ -34,3 +34,29 @@ about-sidebar:
         url: /about/partnerships/
       - title: "User Agreement"
         url: /about/agreement/
+
+projects-sidebar:
+  - title: " "
+    children: 
+      - title: "Overview"
+        url: /projects/
+      - title: "Climate Normals"
+        url: /projects/normals/
+      - title: "Montana State Library"
+        url: /projects/msl/
+      - title: "Native Climate"
+        url: /projects/native-climate/
+      - title: "Montana Climate Assessment"
+        url: /projects/mca/
+
+research-sidebar: 
+  - title: ""
+    children:
+      - title: "Publications List"
+        url: /research/
+  - title: "Highlighted Publications"
+    children:
+      - title: "IrrMapper"
+        url: /research/irrmapper/
+      - title: "Drought Timescales"
+        url: /research/timescales/

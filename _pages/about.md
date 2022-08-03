@@ -3,10 +3,8 @@ layout: single
 title: About the Climate Office
 permalink: /about/
 header:
-  overlay_color: "#000"
-  overlay_filter: "0.5"
   overlay_image: /assets/images/about_banner.jpg
-  caption: Augusta, MT (Photo by Michael Bourgault)
+  caption: "Photo Credit: Unsplash"
 excerpt: " <br />"
 classes: wide
 sidebar:
