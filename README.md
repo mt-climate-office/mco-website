@@ -1,37 +1,35 @@
-## Welcome to GitHub Pages
+## The Montana Climate Office Website
 
-You can use the [editor on GitHub](https://github.com/mt-climate-office/mco-website/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+This repository contains the code used to create the Montana Climate Office [website](https://mt-climate-office.github.io/mco-website). The website is hosted using [GitHub Pages](https://pages.github.com/) using [Jekyll](https://jekyllrb.com/) and the [Minimal Mistakes](https://github.com/mmistakes/minimal-mistakes) theme. The website can be stood up locally for testing purposes either using Ruby or Docker. For either method, you will first need to clone the package:
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+```{bash}
+git clone https://github.com/mt-climate-office/mco-website.git
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+cd /path/to/mco-website
 ```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+## Using Ruby
+Install Ruby and Bundler:
+```
+sudo apt update
+sudo apt install ruby-full
+```
 
-### Jekyll Themes
+Bundle the Gemfile:
+```
+bundle
+```
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/mt-climate-office/mco-website/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+Serve the site locally:
+```
+bundle exec jekyll serve
+```
 
-### Support or Contact
+This will serve the website locally at [https://127.0.0.1:4000/mco-website/](https://127.0.0.1:4000/mco-website/) and automatically update when files are changed. 
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+## Using Docker Compose
+
+```
+docker compose up --build -d
+```
+This will serve the website locally at [https://0.0.0.0:4000/mco-website/](https://0.0.0.0:4000/mco-website/) and automatically update when files are changed. 
