@@ -14,7 +14,7 @@ The Montana Climate Office (MCO) is committed to providing free and easily acces
 
 ## `latest`
 The latest endpoint provides the latest data available at all mesonet stations. Access the data using [https://mesonet.climate.umt.edu/api/v2/stations/](https://mesonet.climate.umt.edu/api/v2/latest/):
-<div style="width: 100%; height: 300px;"><iframe style="width: 100%; height: 300px;" src="https://data.climate.umt.edu/website/assets/latest.html" frameborder="0px"></iframe></div>
+<div style="width: 100%; height: 300px;"><iframe style="width: 100%; height: 300px;" src="https://mesonet.climate.umt.edu/api/v2/stations/" frameborder="0px"></iframe></div>
 
 ## `stations`
 The stations endpoint lists all the stations that are a part of the Montana Mesonet. Access the data using [https://mesonet.climate.umt.edu/api/v2/stations/](https://mesonet.climate.umt.edu/api/v2/stations/):
@@ -22,4 +22,4 @@ The stations endpoint lists all the stations that are a part of the Montana Meso
 
 ## `photos`
 The photos endpoint provides the lates photo available at a given HydroMet station. Access the data using [https://mesonet.climate.umt.edu/api/v2/photos/{station}/{direction}/](https://mesonet.climate.umt.edu/api/v2/photos/aceabsar/s/?force=True):
-{% include image.html url="https://data.climate.umt.edu/website/assets/latest_photo.png" description="The latest image from the Absarokee HydroMet station" external="true" %}
+{% include image.html url="https://mesonet.climate.umt.edu/api/v2/photos/aceabsar/s/?force=True" description="The latest image from the Absarokee HydroMet station" external="true" %}
