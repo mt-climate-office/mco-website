@@ -1,0 +1,6 @@
+
+# must be ended with a new line "LF" (Unix) and not "CRLF" (Windows)
+*/15 * * * * /processing/grab_latest.sh
+0 */6 * * * /processing/grab_photo.sh
+0 0 * * 0 /processing/grab_stations.sh
+# An empty line is required at the end of this file for a valid cron file.

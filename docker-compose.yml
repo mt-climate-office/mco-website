@@ -1,7 +1,9 @@
+version: '3.9'
+
 services:
-  jekyll:
-    image: bretfisher/jekyll-serve
-    volumes:
-      - .:/site
-    ports:
-      - '4000:4000'
+    grab_api:
+        container_name: grab_api
+        restart: always
+        volumes:
+          - /var/data/website/assets/:/data/
+        build: .
