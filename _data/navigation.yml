@@ -36,6 +36,9 @@ projects-sidebar:
     url: /projects/
   - title: "Climate Normals"
     url: /projects/normals/
+    children: 
+      - title: Climate Atlas
+        url: /projects/normals/atlas/
   - title: "Montana State Library"
     url: /projects/msl/
   - title: "Native Climate"
