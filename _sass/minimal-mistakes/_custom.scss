@@ -76,13 +76,13 @@
 .image-gallery {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill,minmax(600px, 1fr));
     justify-content: center;
     padding: 4px;
 }
 
 .box {
-    flex-basis: 25%;
+    flex-basis: 100%;
     width: 100%;
     padding: 10px;
     margin: 2px;
@@ -97,7 +97,7 @@
 
 .img-gallery {
     width: 100%;
-    height: 200px;
+    height: minmax(200px, auto);
     object-fit: cover;
     transform: scale(1);
     transition: all 0.3s ease-in-out;
@@ -105,4 +105,13 @@
 
 .img-gallery:hover {
     transform: scale(1.05);
+}
+
+.mdc-grid-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-auto-rows: auto;
+    align-items: center;
+    grid-gap: 25px;
+    width: 95%;
 }

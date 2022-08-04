@@ -12,48 +12,49 @@ main:
     url: /about/
 
 mesonet-sidebar:
-  - title: " "
-    children: 
-      - title: "Montana Mesonet Overview"
-        url: /mesonet/
-      - title: "Montana Mesonet API"
-        url: /mesonet/api/
-      - title: "Montana Mesonet Dashboard"
-        url: /mesonet/dashboard/
+  - title: "Montana Mesonet Overview"
+    url: /mesonet/
+  - title: "Montana Mesonet API"
+    url: /mesonet/api/
+  - title: "Montana Mesonet Dashboard"
+    url: /mesonet/dashboard/
 
 about-sidebar:
-  - title: " "
-    children: 
-      - title: "About"
-        url: /about/
-      - title: "MCO Team"
-        url: /about/team/
-      - title: "History"
-        url: /about/history/
-      - title: "Partnerships"
-        url: /about/partnerships/
-      - title: "User Agreement"
-        url: /about/agreement/
+  - title: "About"
+    url: /about/
+  - title: "MCO Team"
+    url: /about/team/
+  - title: "History"
+    url: /about/history/
+  - title: "Partnerships"
+    url: /about/partnerships/
+  - title: "User Agreement"
+    url: /about/agreement/
 
 projects-sidebar:
-  - title: " "
-    children: 
-      - title: "Overview"
-        url: /projects/
-      - title: "Climate Normals"
-        url: /projects/normals/
-      - title: "Montana State Library"
-        url: /projects/msl/
-      - title: "Native Climate"
-        url: /projects/native-climate/
-      - title: "Montana Climate Assessment"
-        url: /projects/mca/
+  - title: "Overview"
+    url: /projects/
+  - title: "Climate Normals"
+    url: /projects/normals/
+  - title: "Montana State Library"
+    url: /projects/msl/
+  - title: "Native Climate"
+    url: /projects/native-climate/
+  - title: "Montana Climate Assessment"
+    url: /projects/mca/
+  - title: "Montana Drought & Climate"
+    url: /projects/mdc/
+    children:
+      - title: MDC Overview
+        url: /projects/mdc/overview/
+      - title: MDC Team
+        url: /projects/mdc/team/
+      - title: MDC Newsletters
+        url: /projects/mdc/news/
 
 research-sidebar: 
-  - title: ""
-    children:
-      - title: "Publications List"
-        url: /research/
+  - title: "Publications List"
+    url: /research/
   - title: "Highlighted Publications"
     children:
       - title: "IrrMapper"

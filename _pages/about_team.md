@@ -12,4 +12,4 @@ sidebar:
   nav: about-sidebar
 ---
 
-{% include about_gallery.html %}
+{% include about_gallery.html team=site.data.team %}
