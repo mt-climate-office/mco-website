@@ -9,4 +9,6 @@ excerpt: " <br />"
 classes: wide
 ---
 
-The Montana Climate Office (MCO) installed 6 weather and soil moisture monitoring stations in 2016 as part of the Montana Research and Economic Development Initiative (MREDI). The Mesonet was designed to support decision-making for statewide drought assessments, precision agriculture and rangeland and forested watershed management. Since 2016 the network has grown to 94 stations through support from private landowners, watershed groups, tribes, state agencies and grants from federal entities. In 2020 the MCO was awarded a contract from the U.S. Army Corps to add 205 additional stations. The new stations will be installed every 500 square miles in central and eastern Montana to improve drought assessments and flood forecasting - in the protection of lives and property.
+The Montana Climate Office collaborates with the National Integrated Drought Information System to derive current drought metrics across the Upper Missouri River Basin. The metrics are available on the [Drought Dashboard](https://drought.climate.umt.edu), which allows users to interact with and explore current drought conditions across the region: 
+
+<div style="width: 100%; height: 650px;"><iframe style="width: 100%; height: 650px;" src="https://drought.climate.umt.edu" frameborder="0px"></iframe></div>
