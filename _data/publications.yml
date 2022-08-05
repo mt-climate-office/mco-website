@@ -1,13 +1,47 @@
 - title: "Drought assessment has been outpaced by climate change: empirical arguments for a paradigm shift"
   authors: "Hoylman, Zachary and Bocinsky, R. and Jencso, Kelsey"
-  citation: "Hoylman, Zachary & Bocinsky, R. & Jencso, Kelsey. (2022). Drought assessment has been outpaced by climate change: empirical arguments for a paradigm shift. Nature Communications. 13. 2715. 10.1038/s41467-022-30316-5."
+  citation: >- 
+    "Hoylman, Zachary & Bocinsky, R. & Jencso, Kelsey. (2022). Drought 
+    assessment has been outpaced by climate change: empirical arguments 
+    for a paradigm shift. Nature Communications. 13. 2715. 10.1038/s41467-022-30316-5."
   journal: "Nature Communications"
   doi: "https://doi.org/10.1038/s41467-022-30316-5"
-  abstract: "Despite the acceleration of climate change, erroneous assumptions of climate stationarity are still inculcated in the management of water resources in the United States (US). The US system for drought detection, which triggers billions of dollars in emergency resources, adheres to this assumption with preference towards 60-year (or longer) record lengths for drought characterization. Using observed data from 1,934 Global Historical Climate Network (GHCN) sites across the US, we show that conclusions based on long climate records can substantially bias assessment of drought severity. Bias emerges by assuming that conditions from the early and mid 20th century are as likely to occur in today’s climate. Numerical simulations reveal that drought assessment error is relatively low with limited climatology lengths (~30 year) and that error increases with longer record lengths where climate is changing rapidly. We assert that non-stationarity in climate must be accounted for in contemporary assessments to more accurately portray present drought risk."
+  abstract: >-
+    "Despite the acceleration of climate change, erroneous assumptions of climate stationarity
+    are still inculcated in the management of water resources in the United States (US). The
+    US system for drought detection, which triggers billions of dollars in emergency resources,
+    adheres to this assumption with preference towards 60-year (or longer) record lengths
+    for drought characterization. Using observed data from 1,934 Global Historical Climate
+    Network (GHCN) sites across the US, we show that conclusions based on long climate records
+    can substantially bias assessment of drought severity. Bias emerges by assuming that
+    conditions from the early and mid 20th century are as likely to occur in today's climate.
+    Numerical simulations reveal that drought assessment error is relatively low with limited
+    climatology lengths (~30 year) and that error increases with longer record lengths where
+    climate is changing rapidly. We assert that non-stationarity in climate must be accounted
+    for in contemporary assessments to more accurately portray present drought risk."
 
 - title: "IrrMapper: A Machine Learning Approach for High Resolution Mapping of Irrigated Agriculture Across the Western U.S"
   authors: "Ketchum, David and Jencso, Kelsey and Maneta, Marco and Melton, Forrest and Jones, Matthew and Huntington, Justin"
   citation: "Ketchum, David & Jencso, Kelsey & Maneta, Marco & Melton, Forrest & Jones, Matthew & Huntington, Justin. (2020). IrrMapper: A Machine Learning Approach for High Resolution Mapping of Irrigated Agriculture Across the Western U.S. Remote Sensing. 12. 2328. 10.3390/rs12142328. "
   journal: "Remote Sensing"
   doi: "https://doi.org/10.3390/rs12142328"
-  abstract: "High frequency and spatially explicit irrigated land maps are important for understanding the patterns and impacts of consumptive water use by agriculture. We built annual, 30 m resolution irrigation maps using Google Earth Engine for the years 1986–2018 for 11 western states within the conterminous U.S. Our map classifies lands into four classes: irrigated agriculture, dryland agriculture, uncultivated land, and wetlands. We built an extensive geospatial database of land cover from each class, including over 50,000 human-verified irrigated fields, 38,000 dryland fields, and over 500,000 km 2 of uncultivated lands. We used 60,000 point samples from 28 years to extract Landsat satellite imagery, as well as climate, meteorology, and terrain data to train a Random Forest classifier. Using a spatially independent validation dataset of 40,000 points, we found our classifier has an overall binary classification (irrigated vs. unirrigated) accuracy of 97.8%, and a four-class overall accuracy of 90.8%. We compared our results to Census of Agriculture irrigation estimates over the seven years of available data and found good overall agreement between the 2832 county-level estimates (r 2 = 0.90), and high agreement when estimates are aggregated to the state level (r 2 = 0.94). We analyzed trends over the 33-year study period, finding an increase of 15% (15,000 km 2 ) in irrigated area in our study region. We found notable decreases in irrigated area in developing urban areas and in the southern Central Valley of California and increases in the plains of eastern Colorado, the Columbia River Basin, the Snake River Plain, and northern California."
+  abstract: >- 
+    "High frequency and spatially explicit irrigated land maps are important for understanding
+    the patterns and impacts of consumptive water use by agriculture. We built annual, 30 m
+    resolution irrigation maps using Google Earth Engine for the years 1986-2018 for 11 western
+    states within the conterminous U.S. Our map classifies lands into four classes: irrigated
+    agriculture, dryland agriculture, uncultivated land, and wetlands. We built an extensive
+    geospatial database of land cover from each class, including over 50,000 human-verified
+    irrigated fields, 38,000 dryland fields, and over 500,000 km<sup>2</sup> of uncultivated lands. We
+    used 60,000 point samples from 28 years to extract Landsat satellite imagery, as well as
+    climate, meteorology, and terrain data to train a Random Forest classifier. Using a
+    spatially independent validation dataset of 40,000 points, we found our classifier has an
+    overall binary classification (irrigated vs. unirrigated) accuracy of 97.8%, and a
+    four-class overall accuracy of 90.8%. We compared our results to Census of Agriculture
+    irrigation estimates over the seven years of available data and found good overall agreement
+    between the 2832 county-level estimates (r<sup>2</sup> = 0.90), and high agreement when estimates are
+    aggregated to the state level (r<sup>2</sup> = 0.94). We analyzed trends over the 33-year study period,
+    finding an increase of 15% (15,000 km<sup>2</sup>) in irrigated area in our study region. We found
+    notable decreases in irrigated area in developing urban areas and in the southern Central
+    Valley of California and increases in the plains of eastern Colorado, the Columbia River
+    Basin, the Snake River Plain, and northern California."

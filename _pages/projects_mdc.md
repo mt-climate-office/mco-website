@@ -25,5 +25,3 @@ The objectives of the project are to:
 * Develop a detailed understanding of how these information technologies are utilized in producer decisions about water use and conservation, and adaptation to drought and variability.
 
 Through this project, an interdisciplinary team of hydroclimatologists, social scientists, and Extension specialists will build knowledge of the key factors that influence decision-making and the behaviors that drive water use as well as build capacity to manage the changing availability of water.
-
-To learn more about the Montana Drought and Climate project, please read our project overview, meet our team, or view draft and published MT Drought & Climate newsletters.

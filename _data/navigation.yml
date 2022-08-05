@@ -30,6 +30,8 @@ about-sidebar:
     url: /about/partnerships/
   - title: "User Agreement"
     url: /about/agreement/
+  - title: Support Us
+    url: /about/support/
 
 projects-sidebar:
   - title: "Overview"
@@ -43,8 +45,6 @@ projects-sidebar:
     url: /projects/msl/
   - title: "Native Climate"
     url: /projects/native-climate/
-  - title: "Montana Climate Assessment"
-    url: /projects/mca/
   - title: "Montana Drought & Climate"
     url: /projects/mdc/
     children:
