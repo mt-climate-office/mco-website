@@ -1,40 +1,15 @@
-<!-- Method inspired by: https://dmnfarrell.github.io/software/jekyll-galleries -->
-<div class ="image-gallery">
-    {% for p in include.team %}
-    <!-- <div class="box">
-        <img src="{{ site.url }}{{ site.baseurl }}/{{ p.photo }}" alt="{{ p.name }}"  class="img-gallery" />
-        <h3 style="margin: 5px; text-align: center;">{{ p.name }}</h3>
-        <hr>
-        <h4 class="const-text-box">{{ p.position }}</h4>
-        <p class="const-text-box">{{ p.bio }}</p>
-        {% for link in p.links %}
-            {% if link.label and link.url %}
-                <li style="list-style: none; margin: 0; padding: 0; display: inline;">
-                    <a href="{{ link.url }}" rel="nofollow noopener noreferrer">
-                        <i class="{{ link.icon | default: 'fas fa-link' }}" aria-hidden="true"></i> {{ link.label }}
-                    </a>
-                </li>
-            {% endif %}
+<!-- credit to https://github.com/codingmarket07/our-team-section-ap30 for layout and css  -->
+<div class="wrapper-about">
+    <div class="our_team">
+        {% for person in include.team %}
+        <div class="team_member">
+            <div class="member_img">
+                <img src="{{ site.url }}{{ site.baseurl }}/{{ person.photo }}" alt="{{ person.name }}">
+            </div>
+            <h3>{{ person.name }}</h3>
+            <h4>{{ person.position }}</h4>
+            <p> {{ person.bio }}</p>
+        </div>
         {% endfor %}
-    </div> -->
-    <div class="mdc-grid-wrapper">
-        <div style="text-align: center;">
-            <img src="{{ site.url }}{{ site.baseurl }}/{{ p.photo }}" alt="{{ p.name }}"  class="img-gallery" />
-            {% for link in p.links %}
-            {% if link.label and link.url %}
-                <li style="list-style: none; display: inline;">
-                    <a href="{{ link.url }}" rel="nofollow noopener noreferrer">
-                        <i class="{{ link.icon | default: 'fas fa-link' }}" aria-hidden="true"></i> {{ link.label }}
-                    </a>
-                </li>
-            {% endif %}
-            {% endfor %}
-        </div>
-        <div>        
-            <h4 style="text-align: center;">{{ p.name }} — {{ p.position }}</h4>
-            <p>{{ p.bio }}</p>
-        </div>
-    </div>
-    <hr>
-    {% endfor %}
+    </div> 
 </div>

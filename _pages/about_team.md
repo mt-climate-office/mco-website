@@ -11,5 +11,6 @@ sidebar:
   title: "About Us"
   nav: about-sidebar
 ---
+# Montana Climate Office Team
 
 {% include about_gallery.html team=site.data.team %}

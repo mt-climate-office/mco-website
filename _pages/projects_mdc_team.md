@@ -11,5 +11,6 @@ sidebar:
   title: "Projects"
   nav: projects-sidebar
 ---
+# Montana Drought & Climate Team
 
 {% include about_gallery.html team=site.data.mdc-team %}
