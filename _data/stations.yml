@@ -1,0 +1,294 @@
+- short_name: aceabsar
+  long_name: Absarokee (HydroMet)
+
+- short_name: wsrabsaw
+  long_name: Absarokee W (AgriMet)
+
+- short_name: blmangel
+  long_name: Angela (AgriMet)
+
+- short_name: blm1arge
+  long_name: Argenta (AgriMet)
+
+- short_name: blmbattl
+  long_name: Battle Creek (AgriMet)
+
+- short_name: blmbelfr
+  long_name: Belfry E (AgriMet)
+
+- short_name: mdabench
+  long_name: Benchland NE (AgriMet)
+
+- short_name: bentlake
+  long_name: Benton Lake W (AgriMet)
+
+- short_name: mdabigsa
+  long_name: Big Sandy SW (AgriMet)
+
+- short_name: wsrbigtm
+  long_name: Big Timber SE (AgriMet)
+
+- short_name: nctbirne
+  long_name: Birney N (AgriMet)
+
+- short_name: acebozem
+  long_name: Bozeman (HydroMet)
+
+- short_name: bozmtest
+  long_name: Bozeman Test (AgriMet)
+
+- short_name: pvbrisbi
+  long_name: Brisbin (AgriMet)
+
+- short_name: blmbroad
+  long_name: Broadus (AgriMet)
+
+- short_name: acebroad
+  long_name: Broadview (HydroMet)
+
+- short_name: wsrbroad
+  long_name: Broadview E (AgriMet)
+
+- short_name: nctbusby
+  long_name: Busby N (AgriMet)
+
+- short_name: blmcapit
+  long_name: Capitol (AgriMet)
+
+- short_name: pvcarbel
+  long_name: Carbella N (AgriMet)
+
+- short_name: mdacasca
+  long_name: Cascade E (AgriMet)
+
+- short_name: mdacharl
+  long_name: Charlo Heights (AgriMet)
+
+- short_name: blmhavre
+  long_name: Cherry Ridge (AgriMet)
+
+- short_name: mdachine
+  long_name: Chinook E (AgriMet)
+
+- short_name: mdachote
+  long_name: Choteau NE (AgriMet)
+
+- short_name: ebarllob
+  long_name: Clearwater SW (AgriMet)
+
+- short_name: turekran
+  long_name: Coffee Creek N (AgriMet)
+
+- short_name: conradmt
+  long_name: Conrad (AgriMet)
+
+- short_name: wsrboydw
+  long_name: Cooney Reservoir W (AgriMet)
+
+- short_name: corvalli
+  long_name: Corvallis (AgriMet)
+
+- short_name: acecrowa
+  long_name: Crow Agency (HydroMet)
+
+- short_name: crowagen
+  long_name: Crow Agency E (AgriMet)
+
+- short_name: mdadagma
+  long_name: Dagmar NW (AgriMet)
+
+- short_name: mdadillo
+  long_name: Dillon NE (AgriMet)
+
+- short_name: mdaedgar
+  long_name: Edgar E (AgriMet)
+
+- short_name: ekalakas
+  long_name: Ekalaka SE (AgriMet)
+
+- short_name: pvemigra
+  long_name: Emigrant E (AgriMet)
+
+- short_name: ftbentcb
+  long_name: Fort Benton E (AgriMet)
+
+- short_name: arskeogh
+  long_name: Fort Keogh N (AgriMet)
+
+- short_name: arskeose
+  long_name: Fort Keogh SE (AgriMet)
+
+- short_name: arskeosw
+  long_name: Fort Keogh SW (AgriMet)
+
+- short_name: blmfortp
+  long_name: Fort Peck (AgriMet)
+
+- short_name: mdafroid
+  long_name: Froid NE (AgriMet)
+
+- short_name: mdagildf
+  long_name: Gildford N (AgriMet)
+
+- short_name: mdaglasw
+  long_name: Glasgow W (AgriMet)
+
+- short_name: blmglend
+  long_name: Glendive (AgriMet)
+
+- short_name: mdahardi
+  long_name: Hardin N (AgriMet)
+
+- short_name: blmhardi
+  long_name: Harding Cutoff (AgriMet)
+
+- short_name: acehavre
+  long_name: Havre (HydroMet)
+
+- short_name: havrenmt
+  long_name: Havre (AgriMet)
+
+- short_name: mdahogel
+  long_name: Hogeland SE (AgriMet)
+
+- short_name: namlower
+  long_name: Hot Springs NE Lower (AgriMet)
+
+- short_name: namupper
+  long_name: Hot Springs NE Upper (AgriMet)
+
+- short_name: huntleys
+  long_name: Huntley (AgriMet)
+
+- short_name: aceingom
+  long_name: Ingomar (HydroMet)
+
+- short_name: sevnoner
+  long_name: Ingomar NE (AgriMet)
+
+- short_name: blmjorda
+  long_name: Jordan (AgriMet)
+
+- short_name: kalispel
+  long_name: Kalispell E (AgriMet)
+
+- short_name: blm5kidd
+  long_name: Kidd (AgriMet)
+
+- short_name: mdaledge
+  long_name: Ledger N (AgriMet)
+
+- short_name: lololowr
+  long_name: Lolo Lower (AgriMet)
+
+- short_name: lomawood
+  long_name: Loma S (AgriMet)
+
+- short_name: lubrecht
+  long_name: Lubrecht Forest (AgriMet)
+
+- short_name: usfsmacp
+  long_name: MacDonald Pass (AgriMet)
+
+- short_name: mdamalta
+  long_name: Malta W (AgriMet)
+
+- short_name: mdamanha
+  long_name: Manhattan S (AgriMet)
+
+- short_name: blm3mcca
+  long_name: McCartney Mtn (AgriMet)
+
+- short_name: acemelvi
+  long_name: Melville (HydroMet)
+
+- short_name: wsrmelvi
+  long_name: Melville SE (AgriMet)
+
+- short_name: acemiles
+  long_name: Miles City (HydroMet)
+
+- short_name: mdamiles
+  long_name: Miles City S (AgriMet)
+
+- short_name: acemocca
+  long_name: Moccasin (HydroMet)
+
+- short_name: moccasin
+  long_name: Moccasin (AgriMet)
+
+- short_name: mdamoies
+  long_name: Moiese N (AgriMet)
+
+- short_name: moltwest
+  long_name: Molt W (AgriMet)
+
+- short_name: mbmgtech
+  long_name: MT Tech (AgriMet)
+
+- short_name: mdaoilmo
+  long_name: Oilmont E (AgriMet)
+
+- short_name: blmplevn
+  long_name: Plevna (AgriMet)
+
+- short_name: mdapower
+  long_name: Power S (AgriMet)
+
+- short_name: blmpumpk
+  long_name: Pumpkin Creek (AgriMet)
+
+- short_name: raplejen
+  long_name: Rapleje N (AgriMet)
+
+- short_name: reedpoin
+  long_name: Reed Point NE (AgriMet)
+
+- short_name: wsrreeds
+  long_name: Reed Point S (AgriMet)
+
+- short_name: aceround
+  long_name: Roundup (HydroMet)
+
+- short_name: wrsround
+  long_name: Roundup NE (AgriMet)
+
+- short_name: blmround
+  long_name: Roundup NW (AgriMet)
+
+- short_name: blmroyno
+  long_name: Roy (AgriMet)
+
+- short_name: mdascoby
+  long_name: Scobey N (AgriMet)
+
+- short_name: acesidne
+  long_name: Sidney (HydroMet)
+
+- short_name: sidneymt
+  long_name: Sidney (AgriMet)
+
+- short_name: blmterry
+  long_name: Terry (AgriMet)
+
+- short_name: mdatost2
+  long_name: Toston SW2 (AgriMet)
+
+- short_name: mdatwinb
+  long_name: Twin Bridges S (AgriMet)
+
+- short_name: blmglnor
+  long_name: Vandalia N (AgriMet)
+
+- short_name: blm2virg
+  long_name: Virginia City (AgriMet)
+
+- short_name: blmwarre
+  long_name: Warren E (AgriMet)
+
+- short_name: whitshaw
+  long_name: Whitefish N (AgriMet)
+
+- short_name: blmmatad
+  long_name: Zortman E (AgriMet)
+

@@ -14,6 +14,9 @@ main:
 mesonet-sidebar:
   - title: "Montana Mesonet Overview"
     url: /mesonet/
+    children: 
+      - title: "Mesonet Stations"
+        url: /mesonet/stations
   - title: "Montana Mesonet API"
     url: /mesonet/api/
   - title: "Montana Mesonet Dashboard"
