@@ -187,3 +187,8 @@
   line-height: 20px;
 }
 
+.scroll_box {
+    max-height: 400px;
+    width: 50%; 
+    overflow-y: scroll;
+}
