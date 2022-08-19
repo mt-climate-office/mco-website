@@ -26,3 +26,10 @@ The Montana Climate Office produces drought metrics for the Upper Missouri River
 
 <!-- This makes a nice horizontal rule between sections. -->
 <div class="feature__wrapper"></div>
+
+<div class='jekyll-twitter-plugin' align="left">
+    {% twitter https://twitter.com/mt_climate maxwidth=500 limit=3 %}
+</div>
+
+<h1 style="text-align: center;">Follow on Twitter</h1>
+The Montana Climate Office produces drought metrics for the Upper Missouri River Basin (UMRB) to help state and local governments make timely and informed decisions about drought. Popular drought indices such as SPI, SPEI, and EDDI are derived daily across the domain. Click the image to the right to explore current drought conditions in the UMRB!

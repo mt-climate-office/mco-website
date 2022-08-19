@@ -70,23 +70,20 @@ plugins:
   - jemoji
   - jekyll-include-cache
 
-# author:
-#   name   : "First Lastname"
-#   avatar : "/assets/images/bio-photo.jpg"
-#   bio    : "My awesome biography constrained to a sentence or two goes here."
-#   links:
-#     - label: "Website"
-#       icon: "fas fa-fw fa-link"
-#       url: "https://"
-#     - label: "Twitter"
-#       icon: "fab fa-fw fa-twitter-square"
-#       url: "https://twitter.com/"
-#     - label: "GitHub"
-#       icon: "fab fa-fw fa-github"
-#       url: "https://github.com/"
-#     - label: "Instagram"
-#       icon: "fab fa-fw fa-instagram"
-#       url: "https://instagram.com/"
+author:
+  name   : "Colin Brust"
+  avatar : "/assets/images/bio-photo-2.jpg"
+  bio    : "I like to write code, make graphs, and climb rocks."
+  links:
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://colinbrust.com"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/colin_brust"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/colinbrust"
 
 footer:
   links:
@@ -96,11 +93,14 @@ footer:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:state.climatologist@umontana.edu"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/mt_climate"
 
 defaults:
   # _posts
   - scope:
-      path: ""
+      path: "_posts"
       type: posts
     values:
       layout: single
