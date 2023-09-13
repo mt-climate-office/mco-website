@@ -20,7 +20,7 @@ No one entity can ensure sustained operation and success of a statewide climate 
 # Data Management
 All stations are solar powered, and allow users to check the data from virtually anywhere in the world. Data are transmitted from the data-logger’s internal module to MCO’s secure server via cellular communication. Quality assurance and control checks are applied and the data are available to the user to access and monitor. Transmitted data are backed up in the data-logger’s memory and at the MCO to provide an extra layer of redundancy and protection.
 
-# Contact
+<!-- # Contact
 ## Montana Mesonet Manager
 Kevin Hyde <br />
 W.A. Franke College of Forestry and Conservation <br />
@@ -28,4 +28,4 @@ University of Montana <br />
 32 Campus Drive <br />
 Missoula, MT 59812-5076 <br />
 Phone: 406-546-2109 <br />
-Email: [kevin.hyde@umontana.edu](mailto:kevin.hyde@umontana.edu)
+Email: [kevin.hyde@umontana.edu](mailto:kevin.hyde@umontana.edu) -->

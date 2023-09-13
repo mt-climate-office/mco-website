@@ -4,6 +4,8 @@ main:
     url: /mesonet/
   - title: "Drought"
     url: /drought/
+  - title: "Climate"
+    url: /climate/
   - title: "Projects"
     url: /projects/
   - title: "Research"
@@ -24,6 +26,10 @@ mesonet-sidebar:
   - title: "Montana Mesonet Dashboard"
     url: /mesonet/dashboard/
 
+climate-sidebar:
+  - title: "Overview"
+    url: /climate/
+
 about-sidebar:
   - title: "About"
     url: /about/
@@ -37,6 +43,7 @@ about-sidebar:
     url: /about/agreement/
   - title: Support Us
     url: /about/support/
+  
 
 projects-sidebar:
   - title: "Overview"

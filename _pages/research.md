@@ -18,8 +18,9 @@ sidebar:
 
 {% for pub in site.data.publications %}
 ### {{pub.title}} 
-#### {{pub.authors}}
-##### _{{pub.journal}}_ 
+{{pub.authors}}
+
+_{{pub.journal}}_ 
 > {{pub.abstract}}
 
 [Read Article]({{pub.doi}}){: .btn .btn--info target="_blank"}
