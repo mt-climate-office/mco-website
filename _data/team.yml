@@ -23,8 +23,8 @@
 
 - name: "Kyle Bocinsky"
   position: "Director of Climate Extension"
-  photo: "assets/images/bio-photo-2.jpg"
-  bio: "I like to have fun!"
+  photo: "assets/images/bocinsky.jpg"
+  bio: "Kyle helps make climate data and services accessible for all Montanans."
   team: "it"
   links:
     - label: "Email"
@@ -56,8 +56,8 @@
 
 - name: "Colin Brust"
   position: "Climate Data Specialist"
-  photo: "assets/images/bio-photo-2.jpg"
-  bio: "I like to have fun!"
+  photo: "assets/images/brust.jpg"
+  bio: "Colin develops and maintains the API, dashboard and database for the Montana Mesonet."
   team: "it"
   links:
     - label: "Email"
@@ -78,9 +78,9 @@
       url: "mailto:wes.short@mso.umt.edu"
 
 - name: "David Ketchum"
-  position: "Ph.D Candidate"
-  photo: "assets/images/bio-photo-2.jpg"
-  bio: "I like to have fun!"
+  position: "Hydrologist"
+  photo: "assets/images/ketchum.jpg"
+  bio: "David recently graduated with his Ph.D. from University of Montana and works as a hydrologist at the Montana Department of Natural Resources and Conservation."
   team: "grad"
   links:
     - label: "Email"

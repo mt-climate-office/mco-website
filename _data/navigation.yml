@@ -8,12 +8,12 @@ main:
     url: /climate/
   - title: "Projects"
     url: /projects/
+  - title: "About"
+    url: /about/
   - title: "Research"
     url: /research/
   - title: "Posts"
     url: /posts/
-  - title: "About"
-    url: /about/
 
 mesonet-sidebar:
   - title: "Montana Mesonet Overview"
@@ -21,6 +21,8 @@ mesonet-sidebar:
     children: 
       - title: "Mesonet Stations"
         url: /mesonet/stations
+      - title: "UMRB Project"
+        url: /mesonet/umrb
   - title: "Montana Mesonet API"
     url: /mesonet/api/
   - title: "Montana Mesonet Dashboard"

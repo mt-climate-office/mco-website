@@ -10,6 +10,9 @@
 - short_name: blm1arge
   long_name: Argenta (AgriMet)
 
+- short_name: aceashla
+  long_name: Ashland E (HydroMet)
+
 - short_name: blmbattl
   long_name: Battle Creek (AgriMet)
 
@@ -19,11 +22,17 @@
 - short_name: mdabench
   long_name: Benchland NE (AgriMet)
 
+- short_name: acebento
+  long_name: Benton Lake W (HydroMet)
+
 - short_name: bentlake
   long_name: Benton Lake W (AgriMet)
 
 - short_name: mdabigsa
   long_name: Big Sandy SW (AgriMet)
+
+- short_name: acebigti
+  long_name: Big Timber SE (HydroMet)
 
 - short_name: wsrbigtm
   long_name: Big Timber SE (AgriMet)
@@ -36,6 +45,9 @@
 
 - short_name: bozmtest
   long_name: Bozeman Test (AgriMet)
+
+- short_name: acebrady
+  long_name: Brady NE (HydroMet)
 
 - short_name: pvbrisbi
   long_name: Brisbin (AgriMet)
@@ -52,6 +64,12 @@
 - short_name: nctbusby
   long_name: Busby N (AgriMet)
 
+- short_name: acebusby
+  long_name: Busby S (HydroMet)
+
+- short_name: acebynum
+  long_name: Bynum W (HydroMet)
+
 - short_name: blmcapit
   long_name: Capitol (AgriMet)
 
@@ -67,6 +85,9 @@
 - short_name: blmhavre
   long_name: Cherry Ridge (AgriMet)
 
+- short_name: acechest
+  long_name: Chester SW (HydroMet)
+
 - short_name: mdachine
   long_name: Chinook E (AgriMet)
 
@@ -76,11 +97,17 @@
 - short_name: ebarllob
   long_name: Clearwater SW (AgriMet)
 
+- short_name: acecoffe
+  long_name: Coffee Creek N (HydroMet)
+
 - short_name: turekran
   long_name: Coffee Creek N (AgriMet)
 
 - short_name: conradmt
   long_name: Conrad (AgriMet)
+
+- short_name: acecoone
+  long_name: Cooney Reservoir NW (HydroMet)
 
 - short_name: wsrboydw
   long_name: Cooney Reservoir W (AgriMet)
@@ -94,11 +121,17 @@
 - short_name: crowagen
   long_name: Crow Agency E (AgriMet)
 
+- short_name: csktbira
+  long_name: CSKT Bison Range (HydroMet)
+
 - short_name: mdadagma
   long_name: Dagmar NW (AgriMet)
 
 - short_name: mdadillo
   long_name: Dillon NE (AgriMet)
+
+- short_name: acedupuy
+  long_name: Dupuyer N (HydroMet)
 
 - short_name: mdaedgar
   long_name: Edgar E (AgriMet)
@@ -108,6 +141,9 @@
 
 - short_name: pvemigra
   long_name: Emigrant E (AgriMet)
+
+- short_name: acefores
+  long_name: Forestgrove N (HydroMet)
 
 - short_name: ftbentcb
   long_name: Fort Benton E (AgriMet)
@@ -137,10 +173,13 @@
   long_name: Glendive (AgriMet)
 
 - short_name: mdahardi
-  long_name: Hardin N (AgriMet)
+  long_name: Hardin N (HydroMet)
 
 - short_name: blmhardi
   long_name: Harding Cutoff (AgriMet)
+
+- short_name: aceharlo
+  long_name: Harlowton E (HydroMet)
 
 - short_name: acehavre
   long_name: Havre (HydroMet)
@@ -157,8 +196,8 @@
 - short_name: namupper
   long_name: Hot Springs NE Upper (AgriMet)
 
-- short_name: huntleys
-  long_name: Huntley (AgriMet)
+- short_name: acehuntl
+  long_name: Huntley E (HydroMet)
 
 - short_name: aceingom
   long_name: Ingomar (HydroMet)
@@ -175,14 +214,26 @@
 - short_name: blm5kidd
   long_name: Kidd (AgriMet)
 
+- short_name: acelamed
+  long_name: Lame Deer E (HydroMet)
+
+- short_name: acelavin
+  long_name: Lavina N (HydroMet)
+
 - short_name: mdaledge
   long_name: Ledger N (AgriMet)
+
+- short_name: acelodge
+  long_name: Lodge Grass W (HydroMet)
 
 - short_name: lololowr
   long_name: Lolo Lower (AgriMet)
 
 - short_name: lomawood
   long_name: Loma S (AgriMet)
+
+- short_name: acelorin
+  long_name: Loring SW (HydroMet)
 
 - short_name: lubrecht
   long_name: Lubrecht Forest (AgriMet)
@@ -196,6 +247,9 @@
 - short_name: mdamanha
   long_name: Manhattan S (AgriMet)
 
+- short_name: acematad
+  long_name: Matador Ranch (HydroMet)
+
 - short_name: blm3mcca
   long_name: McCartney Mtn (AgriMet)
 
@@ -204,6 +258,9 @@
 
 - short_name: wsrmelvi
   long_name: Melville SE (AgriMet)
+
+- short_name: acemidwa
+  long_name: Midway Colony (HydroMet)
 
 - short_name: acemiles
   long_name: Miles City (HydroMet)
@@ -220,14 +277,32 @@
 - short_name: mdamoies
   long_name: Moiese N (AgriMet)
 
+- short_name: acemolts
+  long_name: Molt S (HydroMet)
+
 - short_name: moltwest
   long_name: Molt W (AgriMet)
+
+- short_name: acemosnw
+  long_name: Mosby NW (HydroMet)
+
+- short_name: acemosbs
+  long_name: Mosby S (HydroMet)
 
 - short_name: mbmgtech
   long_name: MT Tech (AgriMet)
 
+- short_name: acemusse
+  long_name: Musselshell (HydroMet)
+
+- short_name: aceoilmo
+  long_name: Oilmont (HydroMet)
+
 - short_name: mdaoilmo
   long_name: Oilmont E (AgriMet)
+
+- short_name: aceotter
+  long_name: Otter E (HydroMet)
 
 - short_name: blmplevn
   long_name: Plevna (AgriMet)
@@ -241,11 +316,17 @@
 - short_name: raplejen
   long_name: Rapleje N (AgriMet)
 
+- short_name: aceraple
+  long_name: Rapleje SW (HydroMet)
+
 - short_name: reedpoin
   long_name: Reed Point NE (AgriMet)
 
 - short_name: wsrreeds
   long_name: Reed Point S (AgriMet)
+
+- short_name: acerothi
+  long_name: Rothiemay W (HydroMet)
 
 - short_name: aceround
   long_name: Roundup (HydroMet)
@@ -259,23 +340,50 @@
 - short_name: blmroyno
   long_name: Roy (AgriMet)
 
+- short_name: aceroyeg
+  long_name: Roy E (HydroMet)
+
+- short_name: aceryega
+  long_name: Ryegate S (HydroMet)
+
+- short_name: acesacos
+  long_name: Saco S (HydroMet)
+
+- short_name: acesands
+  long_name: Sand Springs NW (HydroMet)
+
 - short_name: mdascoby
   long_name: Scobey N (AgriMet)
+
+- short_name: acescobe
+  long_name: Scobey NW (HydroMet)
 
 - short_name: acesidne
   long_name: Sidney (HydroMet)
 
-- short_name: sidneymt
-  long_name: Sidney (AgriMet)
+- short_name: acesunri
+  long_name: Sun River SE (HydroMet)
 
 - short_name: blmterry
   long_name: Terry (AgriMet)
 
+- short_name: acetosto
+  long_name: Toston (HydroMet)
+
 - short_name: mdatost2
   long_name: Toston SW2 (AgriMet)
 
+- short_name: aceturne
+  long_name: Turner N (HydroMet)
+
 - short_name: mdatwinb
   long_name: Twin Bridges S (AgriMet)
+
+- short_name: acetwodo
+  long_name: Twodot E (HydroMet)
+
+- short_name: acevalen
+  long_name: Valentine E (HydroMet)
 
 - short_name: blmglnor
   long_name: Vandalia N (AgriMet)
@@ -283,11 +391,17 @@
 - short_name: blm2virg
   long_name: Virginia City (AgriMet)
 
+- short_name: acewarho
+  long_name: War Horse NW (HydroMet)
+
 - short_name: blmwarre
   long_name: Warren E (AgriMet)
 
 - short_name: whitshaw
   long_name: Whitefish N (AgriMet)
+
+- short_name: acewinne
+  long_name: Winnett SW (HydroMet)
 
 - short_name: blmmatad
   long_name: Zortman E (AgriMet)
