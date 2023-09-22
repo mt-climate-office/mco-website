@@ -10,7 +10,7 @@ intro:
 
 {% include feature_row id="intro" type="center" %}
 
-<div class="left_bbox bbox_dims"><iframe class="iframe_size" src="assets/maps/mesonet_map.html" frameborder="0px" float="left"></iframe></div>
+<div class="left_bbox bbox_dims"><iframe class="iframe_size" src="https://mesonet.climate.umt.edu/api/v2/map/stations/" frameborder="0px" float="left" scrolling="no"></iframe></div>
 
 <h1 style="text-align: center;">Explore the Mesonet</h1>
 The Montana Mesonet is a network of 97 weather, soil moisture and snow monitoring stations that the MCO operates across Montana. The stations measure a variety of meteorological variables including air temperature, relative humidity, soil moisture, and precipitation. **Click** on a station on the adjacent map to access station data and view station metadata. To learn more about the mesonet, visit the [Montana Mesonet](/mco-website/mesonet/) tab.
