@@ -54,6 +54,11 @@
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:joel.martin@mso.umt.edu"
 
+- name: "Maureen I. McCarthy, PhD"
+  position: "Affiliate Faculty at MCO"
+  photo: "assets/images/mccarthy_crop.png"
+  bio: "Maureen works with tribal communities to enhance climate resilience."
+
 - name: "Colin Brust"
   position: "Climate Data Specialist"
   photo: "assets/images/brust.jpg"
@@ -66,6 +71,16 @@
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/colinbrust"
+
+- name: "John Stapleton"
+  position: "Hydrologic Technician"
+  photo: "assets/images/stapleton_crop.png"
+  bio: "John builds and maintains the HydroMet stations in the Montana Mesonet."
+  team: "int"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:john.stapleton@umconnect.umt.edu"
 
 - name: "Wes Short"
   position: "Mesonet Field Technician"
@@ -90,6 +105,17 @@
       icon: "fab fa-fw fa-github"
       url: "https://github.com/dgketchum"
 
+- name: "Alex Mausshardt"
+  position: "Mesonet Assistant"
+  photo: "assets/images/mausshardt_crop.png"
+  bio: "Alex helps prepare, install and maintain the Montana Mesonet."
+
+- name: "Ryan Fleetwood"
+  position: "MCO Intern"
+  photo: "assets/images/fleetwood_crop.png"
+  bio: "Ryan is an undergraduate student studying Environmental Science & Sustainability - Water Resources. His work involves snowpack modeling."
+
+
 - name: "Kayla Jamerson"
   position: "Masters Candidate"
   photo: "assets/images/bio-photo-2.jpg"
@@ -101,9 +127,9 @@
       url: "mailto:krjamerson@gmail.com"
 
 - name: "Fin Malone"
-  position: "Soils Intern"
-  photo: "assets/images/bio-photo-2.jpg"
-  bio: "I like to have fun!"
+  position: "Master's Student/Research Assistant"
+  photo: "assets/images/malone.jpg"
+  bio: "Fin Malone is a graduate student in Systems Ecology and conducts field research investigating the water-use and growth of trees in opposing microclimatic conditions."
   team: "int"
   links:
     - label: "Email"
@@ -120,12 +146,3 @@
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:paigenkjohnson@gmail.com"
 
-- name: "John Stapleton"
-  position: "Mesonet Intern"
-  photo: "assets/images/bio-photo-2.jpg"
-  bio: "I like to have fun!"
-  team: "int"
-  links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:john.stapleton@umconnect.umt.edu"

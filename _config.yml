@@ -72,8 +72,8 @@ plugins:
 
 author:
   name   : "Colin Brust"
-  avatar : "/assets/images/bio-photo-2.jpg"
-  bio    : "I like to write code, make graphs, and climb rocks."
+  avatar : "/assets/images/brust.jpg"
+  bio    : "Colin develops and maintains the API, dashboard and database for the Montana Mesonet."
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
