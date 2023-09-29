@@ -105,6 +105,16 @@
       icon: "fab fa-fw fa-github"
       url: "https://github.com/dgketchum"
 
+- name: "Fin Malone"
+  position: "Master's Student/Research Assistant"
+  photo: "assets/images/malone.jpg"
+  bio: "Fin Malone is a graduate student in Systems Ecology and conducts field research investigating the water-use and growth of trees in opposing microclimatic conditions."
+  team: "int"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:fin.malone@umconnect.umt.edu"
+
 - name: "Alex Mausshardt"
   position: "Mesonet Assistant"
   photo: "assets/images/mausshardt_crop.png"
@@ -115,6 +125,10 @@
   photo: "assets/images/fleetwood_crop.png"
   bio: "Ryan is an undergraduate student studying Environmental Science & Sustainability - Water Resources. His work involves snowpack modeling."
 
+- name: "Daniel Martin"
+  position: "MCO Intern"
+  photo: "assets/images/martin.png"
+  bio: "Daniel is an undergraduate student studying Environmental Science and Pre-Law.  His work involves climate outreach."
 
 - name: "Kayla Jamerson"
   position: "Masters Candidate"
@@ -125,16 +139,6 @@
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:krjamerson@gmail.com"
-
-- name: "Fin Malone"
-  position: "Master's Student/Research Assistant"
-  photo: "assets/images/malone.jpg"
-  bio: "Fin Malone is a graduate student in Systems Ecology and conducts field research investigating the water-use and growth of trees in opposing microclimatic conditions."
-  team: "int"
-  links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:fin.malone@umconnect.umt.edu"
 
 - name: "Paige Johnson"
   position: "Native Climate Intern"
