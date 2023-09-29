@@ -75,7 +75,7 @@
 - name: "John Stapleton"
   position: "Hydrologic Technician"
   photo: "assets/images/stapleton_crop.png"
-  bio: "John builds and maintains the HydroMet stations in the Montana Mesonet."
+  bio: "John tests, maintains, troubleshoots and installs our HydroMet stations. He also engages with landowners and collaborators once stations are complete."
   team: "int"
   links:
     - label: "Email"
