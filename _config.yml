@@ -69,6 +69,7 @@ plugins:
   - jekyll-feed
   - jemoji
   - jekyll-include-cache
+  - jekyll-get-json
 
 author:
   name   : "Colin Brust"
@@ -128,6 +129,9 @@ tag_archive:
 lunr:
   search_within_pages: true
 
+jekyll_get_json:
+  - data: stations
+    json: 'https://mesonet.climate.umt.edu/api/v2/stations?type=json'
 # analytics:
 #   provider: "google-gtag"
 #   google:

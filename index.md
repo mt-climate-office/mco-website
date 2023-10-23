@@ -27,9 +27,3 @@ The Montana Climate Office produces daily models of drought conditions for the U
 <!-- This makes a nice horizontal rule between sections. -->
 <div class="feature__wrapper"></div>
 
-<!-- <div class='jekyll-twitter-plugin scroll_box left_bbox bbox_dims' align="left">
-    {% twitter https://twitter.com/mt_climate maxwidth=1000 limit=5 %}
-</div>
-
-<h1 style="text-align: center;">Follow us on Twitter</h1>
-Stay up to date on the latest news regarding the Montana Climate Office by following our Twitter account! Our Twitter gives updates of new station installations, provides weather and climate updates across Montana, and gives overviews of in-depth analyses of climate in Montana.  -->

@@ -1,10 +1,10 @@
 <div class="feature__wrapper">
     <ul>
-        {% for station in include.stations %}
+        {% for station in site.data.stations %}
             <li>
-                <b>{{ station.long_name }}</b>: 
-                <a href="https://mesonet.climate.umt.edu/dash/{{ station.short_name }}" target="_blank">Station Dashboard</a> | 
-                <a href="https://mesonet.climate.umt.edu/api/v2/latest/?stations={{ station.short_name }}" target="_blank">Latest Station Data</a> 
+                <b>{{ station.name }}</b>: 
+                <a href="https://mesonet.climate.umt.edu/dash/{{ station.station }}" target="_blank">Station Dashboard</a> | 
+                <a href="https://mesonet.climate.umt.edu/api/v2/latest/?stations={{ station.station }}" target="_blank">Latest Station Data</a> 
             </li>
         {% endfor %}
     </ul>

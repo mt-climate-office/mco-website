@@ -12,6 +12,6 @@ sidebar:
 ---
 
 # Mesonet Stations
-The Montana Mesonet is currently comprised of 96 stations, with more installments each year. Below is a list of active stations with links to the Mesonet Dashboard and Mesonet API for each station: 
+The Montana Mesonet is currently comprised of {{ site.data.stations | size }} stations, with more installments each year. Below is a list of active stations with links to the Mesonet Dashboard and Mesonet API for each station: 
 
 {% include station_list.html stations=site.data.stations %}
