@@ -10,8 +10,8 @@
 
 - name: "Zach Hoylman"
   position: "Assistant State Climatologist"
-  photo: "assets/images/bio-photo-2.jpg"
-  bio: ""
+  photo: "assets/images/hoylman.jpg"
+  bio: "Zach is a research assistant professor at UM and Montana's assistant state climatologist. His research focuses on ecology, hydrology and drought in Montana"
   team: "clim"
   links:
     - label: "Email"
@@ -36,7 +36,7 @@
 
 - name: "Kevin Hyde"
   position: "Montana Mesonet Manager"
-  photo: "assets/images/bio-photo-2.jpg"
+  photo: "assets/images/hyde.jpeg"
   bio: ""
   team: "mes"
   links:
@@ -130,15 +130,15 @@
   photo: "assets/images/martin.png"
   bio: "Daniel is an undergraduate student studying Environmental Science and Pre-Law.  His work involves climate outreach."
 
-- name: "Kayla Jamerson"
-  position: "Masters Candidate"
-  photo: "assets/images/bio-photo-2.jpg"
-  bio: ""
-  team: "grad"
-  links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:krjamerson@gmail.com"
+# - name: "Kayla Jamerson"
+#   position: "Masters Candidate"
+#   photo: "assets/images/bio-photo-2.jpg"
+#   bio: ""
+#   team: "grad"
+#   links:
+#     - label: "Email"
+#       icon: "fas fa-fw fa-envelope-square"
+#       url: "mailto:krjamerson@gmail.com"
 
 - name: "Paige Johnson"
   position: "Native Climate Intern"
