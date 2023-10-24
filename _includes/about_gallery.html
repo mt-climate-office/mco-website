@@ -4,7 +4,7 @@
         {% for person in include.team %}
         <div class="team_member">
             <div class="member_img">
-                <img src="{{ site.url }}{{ site.baseurl }}/{{ person.photo }}" alt="{{ person.name }}">
+                <img src="{{ site.baseurl }}{{ person.photo }}" alt="{{ person.name }}">
             </div>
             <h3>{{ person.name }}</h3>
             <h4>{{ person.position }}</h4>

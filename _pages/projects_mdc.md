@@ -12,7 +12,7 @@ sidebar:
   nav: projects-sidebar
 ---
 <figure style="width: 40%;" class="align-left">
-  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/MDC_logo_tile.svg" alt="MDC Logo">
+  <img src="{{ site.baseurl }}/assets/images/MDC_logo_tile.svg" alt="MDC Logo">
 </figure> 
 
 *Montana Drought and Climate* is a USDA-funded project of the Montana Climate Office (MCO) at the [W.A. Franke College of Forestry & Conservation](http://www.cfc.umt.edu/) at the University of Montana, in collaboration with the [Montana State University Extension Service](https://www.msuextension.org/). The project is supported by Water for Agriculture Challenge Area grant no. 2017-67027-26313 from the USDA National Institute of Food and Agriculture, and by the [Montana Water Center](http://www.montanawatercenter.org/).

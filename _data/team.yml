@@ -54,6 +54,11 @@
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:joel.martin@mso.umt.edu"
 
+- name: "Annie McVay"
+  position: "Program & Fiscal Coordinator"
+  photo: "/assets/images/bio-photo-2.jpg"
+  bio: ""
+
 - name: "Maureen I. McCarthy, PhD"
   position: "Affiliate Faculty at MCO"
   photo: "/assets/images/mccarthy_crop.png"
