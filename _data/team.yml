@@ -1,6 +1,6 @@
 - name: "Kelsey Jencso"
   position: "State Climatologist"
-  photo: "assets/images/jencso.jpg"
+  photo: "/assets/images/jencso.jpg"
   bio: "Kelsey is the W.A. Franke Endowed Professor of Watershed Hydrology and the State Climatologist. As State Climatologist, he helps Montanans understand and prepare for the future."
   team: "clim"
   links:
@@ -10,7 +10,7 @@
 
 - name: "Zach Hoylman"
   position: "Assistant State Climatologist"
-  photo: "assets/images/hoylman.jpg"
+  photo: "/assets/images/hoylman.jpg"
   bio: "Zach is a research assistant professor at UM and Montana's assistant state climatologist. His research focuses on ecology, hydrology and drought in Montana"
   team: "clim"
   links:
@@ -23,7 +23,7 @@
 
 - name: "Kyle Bocinsky"
   position: "Director of Climate Extension"
-  photo: "assets/images/bocinsky.jpg"
+  photo: "/assets/images/bocinsky.jpg"
   bio: "Kyle helps make climate data and services accessible for all Montanans."
   team: "it"
   links:
@@ -36,7 +36,7 @@
 
 - name: "Kevin Hyde"
   position: "Montana Mesonet Manager"
-  photo: "assets/images/hyde.jpeg"
+  photo: "/assets/images/hyde.jpeg"
   bio: ""
   team: "mes"
   links:
@@ -46,7 +46,7 @@
 
 - name: "Joel Martin"
   position: "Lead Hydrologic Technician"
-  photo: "assets/images/joel_martin.jpg"
+  photo: "/assets/images/joel_martin.jpg"
   bio: "Joel builds, troubleshoots and services the weather stations to ensure they report reliable, accurate data for the Montana Climate Office."
   team: "mes"
   links:
@@ -56,12 +56,12 @@
 
 - name: "Maureen I. McCarthy, PhD"
   position: "Affiliate Faculty at MCO"
-  photo: "assets/images/mccarthy_crop.png"
+  photo: "/assets/images/mccarthy_crop.png"
   bio: "Maureen works with tribal communities to enhance climate resilience."
 
 - name: "Colin Brust"
   position: "Climate Data Specialist"
-  photo: "assets/images/brust.jpg"
+  photo: "/assets/images/brust.jpg"
   bio: "Colin develops and maintains the API, dashboard and database for the Montana Mesonet."
   team: "it"
   links:
@@ -74,7 +74,7 @@
 
 - name: "John Stapleton"
   position: "Hydrologic Technician"
-  photo: "assets/images/stapleton_crop.png"
+  photo: "/assets/images/stapleton_crop.png"
   bio: "John tests, maintains, troubleshoots and installs our HydroMet stations. He also engages with landowners and collaborators once stations are complete."
   team: "int"
   links:
@@ -84,7 +84,7 @@
 
 - name: "Wes Short"
   position: "Hydrologic Technician"
-  photo: "assets/images/short.png"
+  photo: "/assets/images/short.png"
   bio: "Wes is a veteran, biologist, and trades laborer. He helps construct the stations that are collecting the MCO's climate data."
   team: "mes"
   links:
@@ -94,7 +94,7 @@
 
 - name: "David Ketchum"
   position: "Hydrologist"
-  photo: "assets/images/ketchum.jpg"
+  photo: "/assets/images/ketchum.jpg"
   bio: "David recently graduated with his Ph.D. from University of Montana and works as a hydrologist at the Montana Department of Natural Resources and Conservation."
   team: "grad"
   links:
@@ -107,7 +107,7 @@
 
 - name: "Fin Malone"
   position: "Master's Student/Research Assistant"
-  photo: "assets/images/malone.jpg"
+  photo: "/assets/images/malone.jpg"
   bio: "Fin Malone is a graduate student in Systems Ecology and conducts field research investigating the water-use and growth of trees in opposing microclimatic conditions."
   team: "int"
   links:
@@ -117,22 +117,22 @@
 
 - name: "Alex Mausshardt"
   position: "Mesonet Assistant"
-  photo: "assets/images/mausshardt_crop.png"
+  photo: "/assets/images/mausshardt_crop.png"
   bio: "Alex helps prepare, install and maintain the Montana Mesonet."
 
 - name: "Ryan Fleetwood"
   position: "MCO Intern"
-  photo: "assets/images/fleetwood_crop.png"
+  photo: "/assets/images/fleetwood_crop.png"
   bio: "Ryan is an undergraduate student studying Environmental Science & Sustainability - Water Resources. His work involves snowpack modeling."
 
 - name: "Daniel Martin"
   position: "MCO Intern"
-  photo: "assets/images/martin.png"
+  photo: "/assets/images/martin.png"
   bio: "Daniel is an undergraduate student studying Environmental Science and Pre-Law.  His work involves climate outreach."
 
 # - name: "Kayla Jamerson"
 #   position: "Masters Candidate"
-#   photo: "assets/images/bio-photo-2.jpg"
+#   photo: "/assets/images/bio-photo-2.jpg"
 #   bio: ""
 #   team: "grad"
 #   links:
@@ -142,7 +142,7 @@
 
 - name: "Paige Johnson"
   position: "Native Climate Intern"
-  photo: "assets/images/bio-photo-2.jpg"
+  photo: "/assets/images/bio-photo-2.jpg"
   bio: ""
   team: "int"
   links:
