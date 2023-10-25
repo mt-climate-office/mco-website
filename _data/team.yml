@@ -56,8 +56,8 @@
 
 - name: "Annie McVay"
   position: "Program & Fiscal Coordinator"
-  photo: "/assets/images/bio-photo-2.jpg"
-  bio: ""
+  photo: "/assets/images/mcvay.jpg"
+  bio: "Annie oversees the financial management and reporting requirements of the office and supports operational efforts of the various components and programs within the MCO."
 
 - name: "Maureen I. McCarthy, PhD"
   position: "Affiliate Faculty at MCO"
@@ -77,16 +77,6 @@
       icon: "fab fa-fw fa-github"
       url: "https://github.com/colinbrust"
 
-- name: "John Stapleton"
-  position: "Hydrologic Technician"
-  photo: "/assets/images/stapleton_crop.png"
-  bio: "John tests, maintains, troubleshoots and installs our HydroMet stations. He also engages with landowners and collaborators once stations are complete."
-  team: "int"
-  links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:john.stapleton@umconnect.umt.edu"
-
 - name: "Wes Short"
   position: "Hydrologic Technician"
   photo: "/assets/images/short.png"
@@ -96,6 +86,16 @@
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:wes.short@mso.umt.edu"
+
+- name: "John Stapleton"
+  position: "Hydrologic Technician"
+  photo: "/assets/images/stapleton_crop.png"
+  bio: "John tests, maintains, troubleshoots and installs our HydroMet stations. He also engages with landowners and collaborators once stations are complete."
+  team: "int"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:john.stapleton@umconnect.umt.edu"
 
 - name: "David Ketchum"
   position: "Hydrologist"
