@@ -1,6 +1,6 @@
 - name: "Laurie Yung"
   position: "Project Director"
-  photo: "assets/images/mdc-team/yung.jpg"
+  photo: "/assets/images/mdc-team/yung.jpg"
   bio: >- 
     Laurie Yung is a Professor of Natural Resource Social Science 
     in the Department of Society and Conservation.  Her work focuses
@@ -13,7 +13,7 @@
 
 - name: "Kelsey Jencso"
   position: "Montana State Climatologist"
-  photo: "assets/images/mdc-team/jencso.jpg"
+  photo: "/assets/images/mdc-team/jencso.jpg"
   bio: >- 
     Kelsey Jencso is an Associate Professor of Hydrology and the Montana
     State Climatologist. His research focuses on forested mountain
@@ -29,7 +29,7 @@
 
 - name: "Libby Metcalf"
   position: "Social Science Lead"
-  photo: "assets/images/mdc-team/metcalf.jpg"
+  photo: "/assets/images/mdc-team/metcalf.jpg"
   bio: >- 
     Libby Metcalf is an Associate Professor of Recreation Management &
     Human Dimensions of Natural Resources in the W.A. Franke College
@@ -43,7 +43,7 @@
 
 - name: "Kyle Bocinsky"
   position: "Climate Science Lead"
-  photo: "assets/images/mdc-team/bocinsky.jpg"
+  photo: "/assets/images/mdc-team/bocinsky.jpg"
   bio: >- 
     Kyle Bocinsky is a research associate in the Montana Climate Office,
     and the climate science lead for the Montana Drought & Climate
@@ -58,7 +58,7 @@
 
 - name: "Adam Snitker"
   position: "Graduate Assisstant"
-  photo: "assets/images/mdc-team/snitker.jpg"
+  photo: "/assets/images/mdc-team/snitker.jpg"
   bio: >- 
     Adam Snitker is a Master's student in the University of Montana's
     College of Forestry and Conservation. He serves as a research
@@ -70,7 +70,7 @@
 
 - name: "Ada Smith"
   position: "Graduate Assisstant"
-  photo: "assets/images/mdc-team/smith.jpg"
+  photo: "/assets/images/mdc-team/smith.jpg"
   bio: >- 
     Ada Smith is a PhD student in the Department of Society & Conservation
     working in the Human Dimensions Lab. Ada's research interests focus
