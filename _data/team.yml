@@ -78,7 +78,7 @@
       url: "https://github.com/colinbrust"
 
 - name: "Wes Short"
-  position: "Hydrologic Technician"
+  position: "Hydrological Technician"
   photo: "/assets/images/short.png"
   bio: "Wes is a veteran, biologist, and trades laborer. He helps construct the stations that are collecting the MCO's climate data."
   team: "mes"
@@ -88,7 +88,7 @@
       url: "mailto:wes.short@mso.umt.edu"
 
 - name: "John Stapleton"
-  position: "Hydrologic Technician"
+  position: "Hydrological Technician"
   photo: "/assets/images/stapleton_crop.png"
   bio: "John tests, maintains, troubleshoots and installs our HydroMet stations. He also engages with landowners and collaborators once stations are complete."
   team: "int"
@@ -131,24 +131,14 @@
   bio: "Toby is an undergraduate researcher focused on soil water hydrology and operation of the soils laboratory."
 
 - name: "Ryan Fleetwood"
-  position: "MCO Intern"
+  position: "Undergraduate Research Assistant"
   photo: "/assets/images/fleetwood_crop.png"
   bio: "Ryan is an undergraduate student studying Environmental Science & Sustainability - Water Resources. His work involves snowpack modeling."
 
 - name: "Daniel Martin"
-  position: "MCO Intern"
+  position: "Undergraduate Research Assistant"
   photo: "/assets/images/martin.png"
   bio: "Daniel is an undergraduate student studying Environmental Science and Pre-Law.  His work involves climate outreach."
-
-# - name: "Kayla Jamerson"
-#   position: "Masters Candidate"
-#   photo: "/assets/images/bio-photo-2.jpg"
-#   bio: ""
-#   team: "grad"
-#   links:
-#     - label: "Email"
-#       icon: "fas fa-fw fa-envelope-square"
-#       url: "mailto:krjamerson@gmail.com"
 
 - name: "Paige Johnson"
   position: "Native Climate Intern"
