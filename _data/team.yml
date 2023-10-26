@@ -125,6 +125,11 @@
   photo: "/assets/images/mausshardt_crop.png"
   bio: "Alex helps prepare, install and maintain the Montana Mesonet."
 
+- name: "Toby Dunn"
+  position: "Undergraduate Research Assistant"
+  photo: "/assets/images/dunn.jpeg"
+  bio: "Toby is an undergraduate researcher focused on soil water hydrology and operation of the soils laboratory."
+
 - name: "Ryan Fleetwood"
   position: "MCO Intern"
   photo: "/assets/images/fleetwood_crop.png"
