@@ -5,7 +5,7 @@ header:
   overlay_image: /assets/images/banner_image.jpg
   caption: "Photo Credit: Michael Sweet"
 intro: 
-  - excerpt: "**<font size='12' style='text-align: center;'> Our Mission</font>** <br /> The Montana Climate Office aims to provide high-quality, timely, relevant, and scientifically based climate, drought and water resources information information and services to Montanans. As Montana's official climate data stewards, we strive to provide information for specific sectors of interest by either geography or industry, and assist stakeholders in adapting climate products to their needs."
+  - excerpt: "**<font size='12' style='text-align: center;'> Our Mission</font>** <br /> The Montana Climate Office aims to provide high-quality, timely, relevant, and scientifically based climate, drought and water resources information and services to Montanans. As Montana's official climate data stewards, we strive to provide information for specific sectors of interest by either geography or industry, and assist stakeholders in adapting climate products to their needs."
 ---
 
 {% include feature_row id="intro" type="center" %}
