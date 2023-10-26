@@ -19,7 +19,7 @@ email: colin.brust@mso.umt.edu
 description: >- # this means to ignore newlines until "baseurl:"
   The official website of the Montana Climate Office. 
 url: https://climate.umt.edu # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl: /mco-website # the subpath of your site, e.g. "/blog"
+# baseurl: /mco-website # the subpath of your site, e.g. "/blog"
 repository: "mt-climate-office/mco-website" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 github_username: mt-climate-office
 minimal_mistakes_skin: "default"
