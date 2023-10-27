@@ -37,8 +37,8 @@ about-sidebar:
     url: /about/
   - title: "MCO Team"
     url: /about/team/
-  - title: "History"
-    url: /about/history/
+  # - title: "History"
+  #   url: /about/history/
   - title: "Partnerships"
     url: /about/partnerships/
   - title: "User Agreement"
