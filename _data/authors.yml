@@ -1,0 +1,25 @@
+Colin Brust:
+  position: "Climate Data Specialist"
+  avatar: "/assets/images/brust.jpg"
+  bio: "Colin develops and maintains the API, dashboard and database for the Montana Mesonet."
+  team: "it"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:colin.brust@mso.umt.edu"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/colinbrust"
+
+Kyle Bocinsky:
+  position: "Director of Climate Extension"
+  avatar: "/assets/images/bocinsky.jpg"
+  bio: "Kyle helps make climate data and services accessible for all Montanans."
+  team: "it"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:kyle.bocinsky@mso.umt.edu"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/bocinsky"

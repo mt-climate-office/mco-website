@@ -6,6 +6,7 @@ tags:
   - EnviroCams
   - FTP
   - How to
+author: Colin Brust
 author_profile: true
 ---
 As part of Upper Missouri River Basin Plains Snowpack and Soil Moisture Monitoring program, daily photos are provided from each mesonet station. At the Montana Climate Office, we use [EnviroCams](https://www.envirocams.com/) iPatrol PTZ cameras to take these photos at each station. These cameras are great to have in the field because they take quality photos and are able to operate in the extreme heat and cold seen across Montana. However, the documentation that comes with the camera is very lacking, making it difficult for new users to get the cameras setup for their needs. Below is an overview of how we setup our cameras in hopes that it can help others with their setup process. This tutorial assumes the camera is in a remote setting and is connected to the internet via a cell modem with a static I.P. address. 
