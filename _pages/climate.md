@@ -17,4 +17,8 @@ The Montana Climate Office has worked with various groups across the state to pr
 - The 2017 [Montana Climate Assessment](http://montanaclimate.org/chapter/title-page)
 - The 2021 [Report on Climate Change and Human Health](http://montanaclimate.org/c2h2_1introduction)
 - An [update to the 2017 Montana Climate Assessment](https://mt-climate-office.github.io/MCA/) using the latest available data.
-- The [Climate Data Explorer](https://fcfc-mesonet-staging.cfc.umt.edu/climate/) for exploring projected changes in climate.
+- The [Climate Data Explorer](https://fcfc-mesonet-staging.cfc.umt.edu/climate/) for exploring projected changes in climate. An example of the Climate Data Explorer is given below:
+
+{% include image.html url="assets/images/explorer_example.png" description="Climate Explorer example of annual precipitation in Missoula County." %}
+
+

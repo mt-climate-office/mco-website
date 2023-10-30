@@ -17,27 +17,27 @@ Below is a tutorial on how to spin up a Windows virtual machine and install ArcG
 </head>
 <div id="response-container"></div>
 <script>
-    const url = 'https://raw.githubusercontent.com/mt-climate-office/technical-guides/master/arcgis_mac/arcgis_mac.md?token=GHSAT0AAAAAACGGKBDBCBY5BZDPLKS7CUEGZJ4DRQQ'
+  const url = 'https://data.climate.umt.edu/website/assets/arcgis_mac.md'
 
-    const responseContainer = document.getElementById('response-container');
+  const responseContainer = document.getElementById('response-container');
 
-    fetch(url, {
-      method: 'GET',
-    })
-    .then(response => {
-      if (response.ok) {
-        return response.text();
-      } else {
-        throw new Error('Failed to fetch data');
-      }
-    })
-        .then(markdownText => {
-          const converter = new showdown.Converter();
-          const htmlText = converter.makeHtml(markdownText);
-          responseContainer.innerHTML = htmlText;
-    })
-    .catch(error => {
-      // Handle any errors
-      console.error(error);
-    });
+  fetch(url, {
+    method: 'GET',
+  })
+  .then(response => {
+    if (response.ok) {
+      return response.text();
+    } else {
+      throw new Error('Failed to fetch data');
+    }
+  })
+      .then(markdownText => {
+        const converter = new showdown.Converter();
+        const htmlText = converter.makeHtml(markdownText);
+        responseContainer.innerHTML = htmlText;
+  })
+  .catch(error => {
+    // Handle any errors
+    console.error(error);
+  });
 </script>
