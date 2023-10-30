@@ -7,3 +7,5 @@ services:
         volumes:
           - /var/data/website/assets/:/data/
         build: .
+        environment: 
+          - .env
