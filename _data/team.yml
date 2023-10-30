@@ -125,6 +125,11 @@
   photo: "/assets/images/mausshardt_crop.png"
   bio: "Alex helps prepare, install and maintain the Montana Mesonet."
 
+- name: "Kenzye Spears"
+  position: "Mesonet Assistant"
+  photo: "/assets/images/spears.png"
+  bio: "Kenzye builds and maintains the AgriMet network of weather stations."
+
 - name: "Toby Dunn"
   position: "Undergraduate Research Assistant"
   photo: "/assets/images/dunn.jpeg"
