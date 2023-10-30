@@ -8,6 +8,7 @@ RUN mkdir /data /processing
 
 COPY ./processing/cronjob /etc/cron.d/cronjob
 COPY ./processing/*.sh /processing
+COPY /home/cbrust/.env /.env
 
 # Give execution rights on the cron job
 RUN chmod 0644 /etc/cron.d/cronjob
