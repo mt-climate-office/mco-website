@@ -27,6 +27,8 @@ mesonet-sidebar:
     url: /mesonet/api/
   - title: "Montana Mesonet Dashboard"
     url: /mesonet/dashboard/
+  - title: "Montana Mesonet QA/QC"
+    url: /mesonet/qaqc/
 
 climate-sidebar:
   - title: "Overview"
