@@ -12,7 +12,7 @@ sidebar:
   nav: projects-sidebar
 ---
 
-The Montana Climate Office has recently developed climate normals for the 1991 - 2020 record. Read more about climate normals below and access the data under the [Climate Normals]({% link _pages/projects_normals_atlas.md %}) section.
+The Montana Climate Office has recently developed climate normals for the 1991 - 2020 record. Read more about climate normals below and access the data under the [Climate Normals]({% link _pages/projects/projects_normals_atlas.md %}) section.
 
 # What are Climate Normals?
 Climate normals are 30-year summaries of climate data that are generated each decade. Normals provide a broad overview of average climate conditions over the past 30 years. To create the normals, historical data from the past three decades are summarized across different timescales (e.g., months, seasons, or years) using common metrics such as the *mean* or *median*. These normals help contextualize current conditions from the perspective of the past few decades.

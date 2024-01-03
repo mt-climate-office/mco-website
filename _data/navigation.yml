@@ -22,7 +22,29 @@ mesonet-sidebar:
       - title: "Mesonet Stations"
         url: /mesonet/stations
       - title: "UMRB Project"
-        url: /mesonet/umrb
+        url: /mesonet/umrb/
+  - title: "Agricultural Tools"
+    url: /mesonet/ag_tools/
+    children: 
+      - title: "Reference ET"
+        url: /mesonet/ag_tools/etr/
+      - title: "Feels Like Temperature"
+        url: /mesonet/ag_tools/feels_like/
+      - title: "Growing Degree Days"
+        url: /mesonet/ag_tools/gdds/
+        children:
+          - title: "Barley GDDs"
+            url: /mesonet/ag_tools/gdds/barley/
+          - title: "Canola GDDs"
+            url: /mesonet/ag_tools/gdds/canola/
+          - title: "Corn GDDs"
+            url: /mesonet/ag_tools/gdds/corn/
+      - title: "Soil Profile Plots"
+        url: /mesonet/ag_tools/soil_profile/
+      - title: "Livestock Risk Index"
+        url: /mesonet/ag_tools/risk/
+      - title: "Soil Water Potential"
+        url: /mesonet/ag_tools/swp/
   - title: "Montana Mesonet API"
     url: /mesonet/api/
   - title: "Montana Mesonet Dashboard"
