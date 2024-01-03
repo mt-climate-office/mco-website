@@ -22,7 +22,7 @@ The Montana Mesonet is a network of over 100 weather, soil moisture and snow mon
 [![image-right](/assets/images/drought_example.png)](https://drought.climate.umt.edu/){:target="_blank"}
 
 <h1 style="text-align: center;">Analyze Drought Conditions</h1>
-The Montana Climate Office produces daily models of drought conditions for the Upper Missouri River Basin (UMRB) to help state and local governments make timely and informed decisions about drought. Popular drought indices and satellite variables for soil moisture and vegetation health are derived daily across the domain. Click the image to the right to explore current drought conditions in the UMRB!
+The Montana Climate Office produces daily models of drought conditions for the Upper Missouri River Basin (UMRB), Washington, Oregon and Idaho to help state and local governments make timely and informed decisions about drought. Popular drought indices and satellite variables for soil moisture and vegetation health are derived daily across the domain. Click the image to the right to explore current drought conditions in the UMRB!
 
 <!-- This makes a nice horizontal rule between sections. -->
 <div class="feature__wrapper"></div>
