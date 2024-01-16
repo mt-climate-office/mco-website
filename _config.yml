@@ -132,8 +132,9 @@ lunr:
 jekyll_get_json:
   - data: stations
     json: 'https://mesonet.climate.umt.edu/api/v2/stations?type=json'
-# analytics:
-#   provider: "google-gtag"
-#   google:
-#     tracking_id: "UA-1234567-8"
-#     anonymize_ip: false # default
+
+analytics:
+  provider: "google-gtag"
+  google:
+    tracking_id: "G-96RBQYREG6"
+    anonymize_ip: false # default
