@@ -39,7 +39,7 @@ $$
 If the temperature, wind speed, or relative humidity don't meet the criteria for calculating the wind chill or heat index, raw temperature is used to calculate the feels like temperature. Below is an example API call to access the feels like temperature:
 
 [https://mesonet.climate.umt.edu/api/derived/daily?stations=crowagen&start_time=2023-12-01&end_time=2023-12-15&elements=feels_like&premade=True](https://mesonet.climate.umt.edu/api/derived/daily?stations=crowagen&start_time=2023-12-01&end_time=2023-12-15&elements=feels_like&premade=True)
-<div style="width: 100%; height: 300px;"><iframe style="width: 100%; height: 300px;" src="https://mesonet.climate.umt.edu/api/derived/daily?stations=crowagen&start_time=2023-12-01&end_time=2023-12-15&elements=etr&premade=True" frameborder="0px"></iframe></div>
+<div style="width: 100%; height: 300px;"><iframe style="width: 100%; height: 300px;" src="https://mesonet.climate.umt.edu/api/derived/daily?stations=crowagen&start_time=2023-12-01&end_time=2023-12-15&elements=feels_like&premade=True" frameborder="0px"></iframe></div>
 
 [^1]: [https://www.weather.gov/media/epz/wxcalc/windChill.pdf](https://www.weather.gov/media/epz/wxcalc/windChill.pdf)
 [^2]: [https://www.wpc.ncep.noaa.gov/html/heatindex_equation.shtml](https://www.wpc.ncep.noaa.gov/html/heatindex_equation.shtml)

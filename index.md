@@ -18,7 +18,15 @@ The Montana Mesonet is a network of over 100 weather, soil moisture and snow mon
 <!-- This makes a nice horizontal rule between sections. -->
 <div class="feature__wrapper"></div>
 
-{:.right_bbox .bbox_dims style="margin-left: 15px"}
+<div class="right_bbox bbox_dims"><iframe class="iframe_size" src="https://mt-climate-office.github.io/nws-spatial/" frameborder="0px" float="right" scrolling="no"></iframe></div>
+
+<h1 style="text-align: center;">Current Weather Warnings</h1>
+Explore current weather alerts issued by the National Weather Service for your area. Click on a shaded area of the map to view information about current weather alerts. If the map has no coloring, there are no current alerts for the state of Montana. For more information about these alerts, visit the National Weather Service [website](https://www.weather.gov/). [Click here](https://mt-climate-office.github.io/nws-spatial/) to view a full page version of this map.
+
+<!-- This makes a nice horizontal rule between sections. -->
+<div class="feature__wrapper"></div>
+
+{:.left_bbox .bbox_dims style="margin-right: 15px"}
 [![image-right](/assets/images/drought_example.png)](https://drought.climate.umt.edu/){:target="_blank"}
 
 <h1 style="text-align: center;">Analyze Drought Conditions</h1>
