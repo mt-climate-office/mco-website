@@ -1,6 +1,6 @@
 ---
 layout: single
-title: MCO User Agreement
+title: Job Postings
 permalink: /about/jobs/
 header:
   overlay_image: /assets/images/about_banner.jpg
