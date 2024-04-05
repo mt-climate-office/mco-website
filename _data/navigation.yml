@@ -69,6 +69,8 @@ about-sidebar:
   #   url: /about/history/
   - title: "Partnerships"
     url: /about/partnerships/
+  - title: "Job Postings"
+    url: /about/jobs/
   - title: "User Agreement"
     url: /about/agreement/
   - title: Support Us
