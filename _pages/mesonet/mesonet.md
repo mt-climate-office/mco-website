@@ -12,7 +12,11 @@ sidebar:
 ---
 
 # Use the Mesonet Dashboard
-The Montana Mesonet Dashboard is a tool that allows you to plot and analyze real-time data from Montana Mesonet weather stations. Visit [https://mesonet.climate.umt.edu/dash/](https://mesonet.climate.umt.edu/dash/) or click the image below to visit the dashboard. For the full functionality of the dashboard, it is recommended to visit from a computer, but a mobile version with fewer features is also available.
+The [Montana Mesonet Dashboard](https://mesonet.climate.umt.edu/dash/) is a free, open source tool for plotting and analyzing the latest data from Montana Mesonet stations. The dashboard uses the [Plotly Dash](https://plotly.com/dash) library to create interactive graphs on demand, displaying up to two weeks of data for a given mesonet station. The dashboard also allows users to compare station data to 30-year [gridMET](https://www.climatologylab.org/gridmet.html) climate normals, download data, view derived agricultural metrics, and plot relevant satellite indicies against station data. For the full functionality of the dashboard, it is recommended to visit from a computer, but a mobile version with fewer features is also available. The code used to create the dashboard is publicly available at [https://github.com/mt-climate-office/mesonet-dashboard](https://github.com/mt-climate-office/mesonet-dashboard). If you encounter any bugs, would like to request a new feature, or have a question regarding the dashboard, please:
+* Email [colin.brust@mso.umt.edu](mailto:colin.brust@mso.umt.edu),
+* Fill out our [feedback form](https://airtable.com/shrxlaYUu6DcyK98s),
+* Or open an issue on our [GitHub](https://github.com/mt-climate-office/mesonet-dashboard/issues). 
+
 <a href="https://mesonet.climate.umt.edu/dash/" target="_blank"><img src="/assets/images/dashboard_image.png" alt="image-right" /></a>
 
 

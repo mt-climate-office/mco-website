@@ -1,0 +1,20 @@
+- name: How to Access the Montana Mesonet Dashboard
+  link: 0wSgvZnGdfc?si=BHqphZAdTRHZ1meW
+  description: A tutorial on how to access the Montana Mesonet Dashboard. 
+
+- name: gridMET Climate Normals
+  link: LMbNrwm_WNQ?si=bfQfo3mlWGqgX_4F
+  description: Display gridMET climate normals alongside mesonet data to contextualize current conditions.
+
+- name: View Soil Water Potential Data
+  link: fJaVMsUBfTU?si=HI6qaqkGoD_w6EsN
+  description: Learn how to access soil water potential data on the Montana Mesonet Dashboard.
+
+- name: Soil Profile and ET Plots
+  link: s5G42-zvcS8?si=2KWZrPqUx_0Wz5xx
+  description: Visualize reference evapotranspiration and soil profile plots on the Mesonet Dashboard.
+
+- name: Livestock Risk Index and Feels Like Temperature
+  link: hIb2UYJuFrg?si=QhPb-vyN5P826ij3
+  description: Learn how to plot the Livestock Risk Index and the "feels like" temperature on the Mesonet Dashboard
+

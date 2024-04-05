@@ -47,10 +47,10 @@ mesonet-sidebar:
         url: /mesonet/ag_tools/risk/
       - title: "Soil Water Potential"
         url: /mesonet/ag_tools/swp/
+  - title: "Montana Mesonet Tutorials"
+    url: /mesonet/tutorials/
   - title: "Montana Mesonet API"
     url: /mesonet/api/
-  - title: "Montana Mesonet Dashboard"
-    url: /mesonet/dashboard/
   - title: "Montana Mesonet QA/QC"
     url: /mesonet/qaqc/
   - title: Montana Mesonet Citation
