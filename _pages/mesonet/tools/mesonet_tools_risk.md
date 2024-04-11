@@ -36,7 +36,7 @@ $$
 
 <span style="font-size: 0.8rem">
 $$
-WS_{cor} = \frac{-6.56}{\exp{\left[ \frac{1}{2.26 \times WS + 0.23}^{0.45} \times (2.9 + 1.14 \times 10^{-6} \times WS^{2.5}-\log_{0.3}{2.26 \times WS + 0.33}^{-2}) \right]}} - 0.00566 \times WS^2 + 3.33
+WS_{cor} = \frac{-6.56}{\exp{\left[ \frac{1}{(2.26 \times WS + 0.23)^{0.45}} \times (2.9 + 1.14 \times 10^{-6} \times WS^{2.5}-\log_{0.3}(2.26 \times WS + 0.33)^{-2}) \right]}} - 0.00566 \times WS^2 + 3.33
 $$
 </span>
 
