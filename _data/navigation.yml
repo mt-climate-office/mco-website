@@ -23,6 +23,8 @@ mesonet-sidebar:
         url: /mesonet/stations
       - title: "UMRB Project"
         url: /mesonet/umrb/
+      - title: "Variables Measured"
+        url: /mesonet/variables/
   - title: "Agricultural Tools"
     url: /mesonet/ag_tools/
     children: 
@@ -45,10 +47,10 @@ mesonet-sidebar:
         url: /mesonet/ag_tools/risk/
       - title: "Soil Water Potential"
         url: /mesonet/ag_tools/swp/
+  - title: "Montana Mesonet Tutorials"
+    url: /mesonet/tutorials/
   - title: "Montana Mesonet API"
     url: /mesonet/api/
-  - title: "Montana Mesonet Dashboard"
-    url: /mesonet/dashboard/
   - title: "Montana Mesonet QA/QC"
     url: /mesonet/qaqc/
   - title: Montana Mesonet Citation
@@ -67,6 +69,8 @@ about-sidebar:
   #   url: /about/history/
   - title: "Partnerships"
     url: /about/partnerships/
+  - title: "Job Postings"
+    url: /about/jobs/
   - title: "User Agreement"
     url: /about/agreement/
   - title: Support Us

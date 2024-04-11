@@ -1,0 +1,14 @@
+<!-- credit to https://github.com/codingmarket07/our-team-section-ap30 for layout and css  -->
+<div class="wrapper-video">
+    <div class="videos">
+        {% for video in include.videos %}
+        <div class="video">
+            <div class="video_frame">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ video.link }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <h4>{{ video.name }}</h4>
+            <p> {{ video.description }}</p>
+        </div>
+        {% endfor %}
+    </div> 
+</div>
