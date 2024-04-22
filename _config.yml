@@ -127,7 +127,8 @@ tag_archive:
   path: /tags/
 
 lunr:
-  search_within_pages: true
+  search_within_pages: false
+#   search_within_pages: true
 
 jekyll_get_json:
   - data: stations
