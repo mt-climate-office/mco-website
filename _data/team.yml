@@ -100,7 +100,7 @@
 - name: "David Ketchum"
   position: "Hydrologist"
   photo: "/assets/images/ketchum.jpg"
-  bio: "David recently graduated with his Ph.D. from University of Montana and works as a hydrologist at the Montana Department of Natural Resources and Conservation."
+  bio: "David received his Ph.D. from University of Montana in 2023 and currently works as a research affiliate at the Climate Office and as a hydrologist at the United States Geological Survey's Wyoming-Montana Water Science Center."
   team: "grad"
   links:
     - label: "Email"
