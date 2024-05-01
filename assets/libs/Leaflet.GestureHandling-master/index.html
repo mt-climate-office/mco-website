@@ -1,0 +1,390 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.25.1 by Michael Rose
+  Copyright 2013-2024 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Leaflet.GestureHandling - Montana Climate Office</title>
+<meta name="description" content="The official website of the Montana Climate Office.">
+
+
+  <meta name="author" content="Colin Brust">
+  
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Montana Climate Office">
+<meta property="og:title" content="Leaflet.GestureHandling">
+<meta property="og:url" content="https://climate.umt.edu/assets/libs/Leaflet.GestureHandling-master/">
+
+
+  <meta property="og:description" content="The official website of the Montana Climate Office.">
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="canonical" href="https://climate.umt.edu/assets/libs/Leaflet.GestureHandling-master/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "https://climate.umt.edu/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Montana Climate Office Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <link rel="shortcut icon" href="/assets/images/favicon.ico">
+  </head>
+
+  <body class="layout--default">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/MCO_logo_icon_only.png" alt="Montana Climate Office"></a>
+        
+        <a class="site-title" href="/">
+          Montana Climate Office
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/mesonet/">Montana Mesonet</a>
+            </li><li class="masthead__menu-item">
+              <a href="/drought/">Drought</a>
+            </li><li class="masthead__menu-item">
+              <a href="/climate/">Climate</a>
+            </li><li class="masthead__menu-item">
+              <a href="/projects/">Projects</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/">About</a>
+            </li><li class="masthead__menu-item">
+              <a href="/research/">Research</a>
+            </li><li class="masthead__menu-item">
+              <a href="/posts/">Posts</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      <h1 id="leafletgesturehandling">Leaflet.GestureHandling</h1>
+
+<p>Version 1.1.8</p>
+
+<p>Brings the basic functionality of <a href="https://developers.google.com/maps/documentation/javascript/examples/interaction-cooperative">Google Maps Gesture Handling</a> into Leaflet.</p>
+
+<p>Prevents users from getting trapped on the map when scrolling a long page.</p>
+
+<p><strong>On Desktop</strong></p>
+
+<p><img src="https://elmarquis.github.io/Leaflet.GestureHandling/examples/images/desktop.png" alt="alt text" title="Desktop" /></p>
+
+<ul>
+  <li>The map ignores the mouse scroll wheel.</li>
+  <li>The user is prompted to use ctrl+scroll to zoom the map.</li>
+</ul>
+
+<p><strong>On Mobile / Touch devices</strong></p>
+
+<p><img src="https://elmarquis.github.io/Leaflet.GestureHandling/examples/images/mobile.png" alt="alt text" title="Mobile" /></p>
+
+<ul>
+  <li>The map ignores single fingered dragging.</li>
+  <li>The user is prompted to use two fingers to pan the map.</li>
+</ul>
+
+<h2 id="demo">Demo</h2>
+
+<p><a href="https://elmarquis.github.io/Leaflet.GestureHandling/examples/">View demo</a></p>
+
+<h2 id="install">Install</h2>
+
+<p>The latest leaflet-gesture-handling can be downloaded from the dist folder.</p>
+
+<h2 id="usage">Usage</h2>
+
+<p>Include the css and js file after leaflet.js.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"css/leaflet-gesture-handling.min.css"</span> <span class="na">type=</span><span class="s">"text/css"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"js/leaflet-gesture-handling.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre></div></div>
+
+<p>Or load this directly from <a href="https://unpkg.com">UNPKG</a>:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"//unpkg.com/leaflet-gesture-handling/dist/leaflet-gesture-handling.min.css"</span> <span class="na">type=</span><span class="s">"text/css"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"//unpkg.com/leaflet-gesture-handling"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre></div></div>
+
+<p>Set <strong>gestureHandling: true</strong> in your map initialization script.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">map</span> <span class="o">=</span> <span class="nx">L</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="dl">"</span><span class="s2">map</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span>
+    <span class="na">center</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mf">25.2702</span><span class="p">,</span> <span class="mf">134.2798</span><span class="p">],</span>
+    <span class="na">zoom</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="na">gestureHandling</span><span class="p">:</span> <span class="kc">true</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<h3 id="use-as-a-module">Use as a module</h3>
+
+<p>If you are using a bundler such as Webpack or Parcel, you can load the library as a module. First install the module with:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm <span class="nb">install </span>leaflet-gesture-handling
+</code></pre></div></div>
+
+<p>Then include the module and CSS in your source:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="o">*</span> <span class="k">as</span> <span class="nx">L</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">leaflet</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">GestureHandling</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">leaflet-gesture-handling</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="k">import</span> <span class="dl">"</span><span class="s2">leaflet/dist/leaflet.css</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">import</span> <span class="dl">"</span><span class="s2">leaflet-gesture-handling/dist/leaflet-gesture-handling.css</span><span class="dl">"</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>Then attach it as a handler to the map:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">L</span><span class="p">.</span><span class="nb">Map</span><span class="p">.</span><span class="nx">addInitHook</span><span class="p">(</span><span class="dl">"</span><span class="s2">addHandler</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">gestureHandling</span><span class="dl">"</span><span class="p">,</span> <span class="nx">GestureHandling</span><span class="p">);</span>
+
+<span class="kd">const</span> <span class="nx">map</span> <span class="o">=</span> <span class="nx">L</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="dl">"</span><span class="s2">map</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span>
+    <span class="na">center</span><span class="p">:</span> <span class="p">[</span><span class="mf">50.36</span><span class="p">,</span> <span class="o">-</span><span class="mf">4.747</span><span class="p">],</span>
+    <span class="na">zoom</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="na">gestureHandling</span><span class="p">:</span> <span class="kc">true</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<h2 id="multi-language-and-custom-text">Multi Language and Custom Text</h2>
+
+<p>The plugin will auto detect a users language from the browser setting and show the appropriate translation. 52 languages are supported without you needing to do anything.</p>
+
+<p>However if you wish to override this, you can set your own text by supplying <strong>gestureHandlingOptions</strong> and a <strong>text</strong> option as shown below. You must specify text for touch, scroll and scrollMac.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">map</span> <span class="o">=</span> <span class="nx">L</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="dl">"</span><span class="s2">map</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span>
+    <span class="na">center</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mf">25.2702</span><span class="p">,</span> <span class="mf">134.2798</span><span class="p">],</span>
+    <span class="na">zoom</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="na">gestureHandling</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="na">gestureHandlingOptions</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">text</span><span class="p">:</span> <span class="p">{</span>
+            <span class="na">touch</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Hey bro, use two fingers to move the map</span><span class="dl">"</span><span class="p">,</span>
+            <span class="na">scroll</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Hey bro, use ctrl + scroll to zoom the map</span><span class="dl">"</span><span class="p">,</span>
+            <span class="na">scrollMac</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Hey bro, use </span><span class="se">\</span><span class="s2">u2318 + scroll to zoom the map</span><span class="dl">"</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<p>*Note: Earlier versions used a property called gestureHandlingText for this which still works.</p>
+
+<h2 id="other-options">Other Options</h2>
+
+<p>To pass in options use the property: <strong>gestureHandlingOptions</strong>.</p>
+
+<ul>
+  <li><strong>duration</strong> : (int) time in ms before the message should disappear. default: 1000 (1 sec)</li>
+</ul>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">map</span> <span class="o">=</span> <span class="nx">L</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="dl">"</span><span class="s2">map</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span>
+    <span class="na">center</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mf">25.2702</span><span class="p">,</span> <span class="mf">134.2798</span><span class="p">],</span>
+    <span class="na">zoom</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="na">gestureHandling</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="na">gestureHandlingOptions</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">duration</span><span class="p">:</span> <span class="mi">5000</span> <span class="c1">//5 secs</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<h2 id="useful-info">Useful info</h2>
+
+<p>GestureHandling disables the following map attributes.</p>
+
+<ul>
+  <li>dragging</li>
+  <li>tap</li>
+  <li>scrollWheelZoom</li>
+</ul>
+
+<p>They are temporarily enabled for the duration the user scrolls with ctrl+mousewheel or uses two fingers to pan the map on mobile.</p>
+
+<h2 id="compatibility-with-other-plugins">Compatibility with other plugins</h2>
+
+<p>I have added compatibility with <a href="https://github.com/Norkart/Leaflet-MiniMap">Leaflet-MiniMap</a>. It allows the user to still pan around the minimap with a single finger.</p>
+
+<p>If there’s any other plugins you’d like this to work with, let me know or submit a pull request.</p>
+
+<h2 id="license">License</h2>
+
+<p>MIT</p>
+
+      
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+    <ul class="social-icons">
+      
+        <li><strong>Follow:</strong></li>
+      
+  
+      
+        
+          
+            <li><a href="https://github.com/mt-climate-office" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+          
+        
+          
+            <li><a href="mailto:state.climatologist@umontana.edu" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+          
+        
+          
+            <li><a href="https://twitter.com/mt_climate" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+          
+        
+      
+  
+      
+        <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+      
+    </ul>
+  </div>
+
+<!-- <div class="page__footer-test">
+    <strong>Contact Information: </strong><br>
+    Montana Climate Office <br> Montana Forest & Conservation Experiment Station <br> University of Montana <br> 32 Campus Drive <br> Missoula, MT 59812 <br> Phone: (406) 243-6793 <br> <a href="mailto:state.climatologist@umontana.edu">state.climatologist@umontana.edu</a> <br>
+</div>
+<br> -->
+<div class="page__footer-copyright">&copy; 2024 Montana Climate Office. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+      </footer>
+    </div>
+
+    		
+ <script type="text/javascript" async
+ src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+</script>
+
+
+
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+  <!-- Google tag (gtag.js) --> 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-96RBQYREG6"></script> 
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}   gtag('js', new Date());
+    gtag('config', 'G-96RBQYREG6');
+</script>
+
+
+
+
+
+
+
+  </body>
+</html>
