@@ -110,6 +110,29 @@
       icon: "fab fa-fw fa-github"
       url: "https://github.com/dgketchum"
 
+
+- name: "Dylan Ritter"
+  position: "Mesonet Assistant"
+  photo: "/assets/images/ritter.png"
+  bio: "Dylan works to prepare, install and maintain the Montana Mesonet. He holds a B.S from the University of Montana in Ecosystem Science & Restoration and has a background in stream restoration, wildlife ecology, and construction."
+  team: "mesonet"
+  links: 
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:dylan.ritter@mso.umt.edu"
+
+
+- name: "Drew Painter"
+  position: "Mesonet Assistant"
+  photo: "/assets/images/painter.png"
+  bio: "Drew is a veteran of the 82D Airborne Division and an aspiring water quality scientist. He helps erect the towers and other infrastructure of the Mesonet stations."
+  team: "mesonet"
+  links: 
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:drew.painter@umconnect.umt.edu"
+
+
 - name: "Fin Malone"
   position: "Master's Student/Research Assistant"
   photo: "/assets/images/malone.jpg"

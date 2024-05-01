@@ -2,6 +2,14 @@
   link: 0wSgvZnGdfc?si=BHqphZAdTRHZ1meW
   description: A tutorial on how to access the Montana Mesonet Dashboard. 
 
+- name: How to View Mesonet Dashboard Data
+  link: HBpbJ7QOOi8?si=3rb50ffDK8mcfUeV
+  description: An overview of how to view data on the Mesonet Dashboard
+
+- name: Intro to Ag Tools and GDDs
+  link: RZcilmJtzgo?si=XizRtj-y8u-piXwE
+  description: Visualize growing degree days and other agricultural tools on the Mesonet Dashboard.
+
 - name: gridMET Climate Normals
   link: LMbNrwm_WNQ?si=bfQfo3mlWGqgX_4F
   description: Display gridMET climate normals alongside mesonet data to contextualize current conditions.
