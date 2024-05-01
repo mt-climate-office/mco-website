@@ -78,7 +78,7 @@
       url: "https://github.com/colinbrust"
 
 - name: "Wes Short"
-  position: "Hydrological Technician"
+  position: "Hydrologic Technician"
   photo: "/assets/images/short.png"
   bio: "Wes is a veteran, biologist, and trades laborer. He helps construct the stations that are collecting the MCO's climate data."
   team: "mes"
@@ -88,7 +88,7 @@
       url: "mailto:wes.short@mso.umt.edu"
 
 - name: "John Stapleton"
-  position: "Hydrological Technician"
+  position: "Hydrologic Technician"
   photo: "/assets/images/stapleton_crop.png"
   bio: "John tests, maintains, troubleshoots and installs our HydroMet stations. He also engages with landowners and collaborators once stations are complete."
   team: "int"
@@ -100,7 +100,7 @@
 - name: "David Ketchum"
   position: "Hydrologist"
   photo: "/assets/images/ketchum.jpg"
-  bio: "David recently graduated with his Ph.D. from University of Montana and works as a hydrologist at the Montana Department of Natural Resources and Conservation."
+  bio: "David received his Ph.D. from University of Montana in 2023 and currently works as a research affiliate at the Climate Office and as a hydrologist at the United States Geological Survey's Wyoming-Montana Water Science Center."
   team: "grad"
   links:
     - label: "Email"
