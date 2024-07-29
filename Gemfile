@@ -21,6 +21,7 @@ group :jekyll_plugins do
   gem "jekyll-paginate"
   gem "jekyll-include-cache"
   gem "jekyll-get-json"
+  gem "jekyll-redirect-from"
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
