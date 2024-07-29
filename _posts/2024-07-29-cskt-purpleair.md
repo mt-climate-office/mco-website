@@ -66,7 +66,7 @@ The latest data from the CSKT PurpleAir Air Quality Sensor Network is available 
 
 
 <div>
-<div style="position:relative;padding-top:80%;cursor:pointer;"  onclick="window.location='https://climate.umt.edu/cskt-air-quality/';">
+<div style="position:relative;padding-top:80%;cursor:pointer;"  onclick="window.open('https://climate.umt.edu/cskt-air-quality/','_blank');">
 <iframe src="https://climate.umt.edu/cskt-air-quality/" frameborder="0" allow="fullscreen"
       style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;"></iframe>
 </div>
