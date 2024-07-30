@@ -96,7 +96,7 @@ The CSKT Tribal Council approved the installation of PurpleAir monitors as part 
   Phone: (770) 362-6659  
 
 - **Michael Durglo, Jr.**  
-  Tribal Preservation Department Head  
+  Climate Change Coordinator  
   Climate Change Advisory Committee Chairman  
   Confederated Salish and Kootenai Tribes  
   Email: [michael.durglo@cskt.org](mailto:michael.durglo@cskt.org){:target="_blank"}  
