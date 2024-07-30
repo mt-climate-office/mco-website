@@ -97,6 +97,15 @@
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:john.stapleton@umconnect.umt.edu"
 
+- name: "Will Kersey"
+  position: "Hydrologic Technician"
+  photo: "/assets/images/kersey.jpg"
+  bio: "Will prepares, installs, troubleshoots, and maintains Montana Mesonet weather stations."
+  links:
+  - label: "Email"
+    icon: "fas fa-fw fa-envelope-square"
+    url: "mailto:will.kersey@mso.umt.edu"
+
 - name: "David Ketchum"
   position: "Hydrologist"
   photo: "/assets/images/ketchum.jpg"
@@ -111,15 +120,15 @@
       url: "https://github.com/dgketchum"
 
 
-- name: "Dylan Ritter"
-  position: "Mesonet Assistant"
-  photo: "/assets/images/ritter.png"
-  bio: "Dylan works to prepare, install and maintain the Montana Mesonet. He holds a B.S from the University of Montana in Ecosystem Science & Restoration and has a background in stream restoration, wildlife ecology, and construction."
-  team: "mesonet"
-  links: 
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:dylan.ritter@mso.umt.edu"
+# - name: "Dylan Ritter"
+#   position: "Mesonet Assistant"
+#   photo: "/assets/images/ritter.png"
+#   bio: "Dylan works to prepare, install and maintain the Montana Mesonet. He holds a B.S from the University of Montana in Ecosystem Science & Restoration and has a background in stream restoration, wildlife ecology, and construction."
+#   team: "mesonet"
+#   links: 
+#     - label: "Email"
+#       icon: "fas fa-fw fa-envelope-square"
+#       url: "mailto:dylan.ritter@mso.umt.edu"
 
 
 - name: "Drew Painter"
@@ -132,6 +141,15 @@
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:drew.painter@umconnect.umt.edu"
 
+- name: "Ethan Jones"
+  position: "Mesonet Assistant"
+  photo: "/assets/images/jones.png"
+  bio: "Ethan is an undergraduate student studying Forestry, with hopes of someday being a forest manager. He helps build weather stations for the Mesonet as well as assisting in other infrastructure related to the Mesonet."
+  team: "mesonet"
+  links: 
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:ethan2.jones@umconnect.umt.edu"
 
 - name: "Fin Malone"
   position: "Master's Student/Research Assistant"
