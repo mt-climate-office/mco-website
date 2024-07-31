@@ -1,0 +1,661 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.26.2 by Michael Rose
+  Copyright 2013-2024 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="en-US" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Backing up a Dockerized Community Edition Neo4j Database - Montana Climate Office</title>
+<meta name="description" content="Neo4j is a platform for managing graph databases. The Montana Climate Office uses Neo4j Community Edition to manage a database of satellite data associated with each of our Mesonet stations (learn more on our GitHub). The database is queried by the Montana Mesonet Dashboard to plot and contextualize current conditions at each Mesonet station. The database is extremely performant and can query over 20 years of data at a given station in a fraction of a second! The database is stood up in a Docker container for ease of mobility and reproducibility.">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Montana Climate Office">
+<meta property="og:title" content="Backing up a Dockerized Community Edition Neo4j Database">
+<meta property="og:url" content="https://climate.umt.edu/code/2022/08/19/backup-neo4j.html">
+
+
+  <meta property="og:description" content="Neo4j is a platform for managing graph databases. The Montana Climate Office uses Neo4j Community Edition to manage a database of satellite data associated with each of our Mesonet stations (learn more on our GitHub). The database is queried by the Montana Mesonet Dashboard to plot and contextualize current conditions at each Mesonet station. The database is extremely performant and can query over 20 years of data at a given station in a fraction of a second! The database is stood up in a Docker container for ease of mobility and reproducibility.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2022-08-19T00:00:00-06:00">
+
+
+
+
+
+
+<link rel="canonical" href="https://climate.umt.edu/code/2022/08/19/backup-neo4j.html">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Montana Climate Office Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script type="text/javascript">
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <link rel="shortcut icon" href="/assets/images/favicon.ico">
+  </head>
+
+  <body class="layout--single" dir="ltr">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/MCO_logo_icon_only.png" alt="Montana Climate Office"></a>
+        
+        <a class="site-title" href="/">
+          Montana Climate Office
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/mesonet/"
+                
+                
+              >Mesonet</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/drought/"
+                
+                
+              >Drought</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/climate/"
+                
+                
+              >Climate</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/posts/"
+                
+                
+              >News</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/research/"
+                
+                
+              >Research</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/projects/"
+                
+                
+              >Projects</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/about/"
+                
+                
+              >About</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="https://climate.umt.edu/">
+        <img src="/assets/images/brust.jpg" alt="" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="https://climate.umt.edu/" itemprop="url"></a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>Colin develops and maintains the API, dashboard and database for the Montana Mesonet.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+        
+          
+            <li><a href="mailto:colin.brust@mso.umt.edu" rel="nofollow noopener noreferrer me"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span></a></li>
+          
+        
+          
+            <li><a href="https://github.com/colinbrust" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Backing up a Dockerized Community Edition Neo4j Database">
+    <meta itemprop="description" content="Neo4j is a platform for managing graph databases. The Montana Climate Office uses Neo4j Community Edition to manage a database of satellite data associated with each of our Mesonet stations (learn more on our GitHub). The database is queried by the Montana Mesonet Dashboard to plot and contextualize current conditions at each Mesonet station. The database is extremely performant and can query over 20 years of data at a given station in a fraction of a second! The database is stood up in a Docker container for ease of mobility and reproducibility.">
+    <meta itemprop="datePublished" content="2022-08-19T00:00:00-06:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="https://climate.umt.edu/code/2022/08/19/backup-neo4j.html" itemprop="url">Backing up a Dockerized Community Edition Neo4j Database
+</a>
+          </h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p><a href="https://neo4j.com/">Neo4j</a> is a platform for managing graph databases. The Montana Climate Office uses Neo4j Community Edition to manage a database of satellite data associated with each of our Mesonet stations (learn more on our <a href="https://github.com/mt-climate-office/mt-mesonet-satellite">GitHub</a>). The database is queried by the <a href="https://mesonet.climate.umt.edu/dash/">Montana Mesonet Dashboard</a> to plot and contextualize current conditions at each Mesonet station. The database is extremely performant and can query over 20 years of data at a given station in a fraction of a second! The database is stood up in a Docker container for ease of mobility and reproducibility.</p>
+
+<h1 id="the-problem">The Problem</h1>
+<p>While we were developing the database, we ran into a roadblock when implementing a method to operationally backup the data. There are numerous tutorials online explaining how to backup a Neo4j database, but they all rely on the paid Enterprise Edition of Neo4j. The Enterprise Edition simply allows you to run the <code class="language-plaintext highlighter-rouge">neo4j-admin backup</code> command on an active database to dump the data into an archived file. In the Community Edition however, you have to use the <code class="language-plaintext highlighter-rouge">neo4j-admin dump</code> command on a stopped database to backup the data. While this seems simple enough, problems arise when using this method within a Docker container. To run the <code class="language-plaintext highlighter-rouge">neo4j-admin dump</code> command, you first have to run <code class="language-plaintext highlighter-rouge">neo4j stop</code> to stop all the databases. Because the default Neo4j Docker image depends on Neo4j to be up and running, this causes the Docker container to shut down, making it impossible to run the <code class="language-plaintext highlighter-rouge">neo4j-admin dump</code> command.</p>
+
+<h1 id="our-solution">Our Solution</h1>
+<p>To work around this problem, we extended the Neo4j Docker image so the container wouldn’t stop when Neo4j was stopped. Then, we used <code class="language-plaintext highlighter-rouge">cron</code> to run a backup script every night. Here is what the new <code class="language-plaintext highlighter-rouge">Dockerfile</code> looks like:</p>
+<div class="language-dockerfile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">FROM</span><span class="s"> neo4j:4.4.8-community</span>
+
+<span class="k">RUN </span>apt-get update <span class="o">&amp;&amp;</span> <span class="se">\
+</span>    apt-get <span class="nt">-y</span> <span class="nb">install </span>cron 
+
+<span class="c"># Copy the backup script into the container. </span>
+<span class="k">COPY</span><span class="s"> ./backup.sh /opt/backup.sh</span>
+
+<span class="c"># Make a directory to store the backed up data in. </span>
+<span class="k">RUN </span><span class="nb">mkdir</span> <span class="nt">-p</span> /dumps/neo4j
+
+<span class="c"># Give execution rights on the cron job</span>
+<span class="k">RUN </span><span class="nb">chmod </span>u+x /opt/backup.sh
+
+<span class="c"># Copy environment and shell into the crontab</span>
+<span class="k">RUN </span><span class="nb">env</span> <span class="o">&gt;&gt;</span> ~/env.log
+<span class="k">RUN </span><span class="nb">echo</span> <span class="s1">'PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'</span> <span class="o">&gt;</span> /etc/crontab
+<span class="k">RUN </span><span class="nb">echo</span> <span class="s1">'SHELL=/bin/bash'</span> <span class="o">&gt;&gt;</span> /etc/crontab
+
+<span class="c"># Make our backup script run at 6am UTC every day.</span>
+<span class="k">RUN </span><span class="nb">echo</span> <span class="s1">'0 6 * * * root bash -c "source $HOME/env.log; source /opt/backup.sh"'</span> <span class="o">&gt;&gt;</span> /etc/crontab
+
+<span class="c"># Create the log file to be able to run tail.</span>
+<span class="k">RUN </span><span class="nb">touch</span> /var/log/cron.log
+
+<span class="c"># Run the tail on the cron log so the container won't stop when Neo4j is stopped. </span>
+<span class="k">CMD</span><span class="s"> tail -f /var/log/cron.log</span>
+</code></pre></div></div>
+
+<p>The backup script that is copied into the Docker container simply stops Neo4j, dumps the latest snapshot of the database into the <code class="language-plaintext highlighter-rouge">/dumps/neo4j</code> folder, then restarts Neo4j:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+/var/lib/neo4j/bin/neo4j stop
+/var/lib/neo4j/bin/neo4j-admin dump <span class="nt">--database</span><span class="o">=</span>neo4j <span class="nt">--to</span><span class="o">=</span>/dumps/neo4j/backup_<span class="si">$(</span><span class="nb">date</span> +%Y%m%d%H%M<span class="si">)</span>.dump
+/var/lib/neo4j/bin/neo4j start
+</code></pre></div></div>
+
+<p>We run the Neo4j container with another Docker container that updates the database with new satellite data, so we use <code class="language-plaintext highlighter-rouge">docker compose</code> to stand up the database. Here is what the relevant portions of our <code class="language-plaintext highlighter-rouge">docker-compose.yml</code> look like:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">version</span><span class="pi">:</span> <span class="s1">'</span><span class="s">3.9'</span>
+
+<span class="na">services</span><span class="pi">:</span>
+    <span class="na">neo4j</span><span class="pi">:</span>
+        <span class="na">container_name</span><span class="pi">:</span> <span class="s">neo4j</span>
+        <span class="na">restart</span><span class="pi">:</span> <span class="s">on-failure</span>
+        <span class="na">build</span><span class="pi">:</span> <span class="s">./neo4j</span>
+        <span class="na">volumes</span><span class="pi">:</span>
+          <span class="c1"># Map volumes to machine so data is persisted between containers.</span>
+          <span class="pi">-</span> <span class="s">/neo4j/data:/data</span> 
+          <span class="pi">-</span> <span class="s">/neo4j/logs:/logs</span> 
+          <span class="pi">-</span> <span class="s">/neo4j/import:/var/lib/neo4j/import</span> 
+          <span class="pi">-</span> <span class="s">/neo4j/plugins:/plugins</span>
+          <span class="c1"># The db-backups volume points to an external NAS server to </span>
+          <span class="c1"># store the data on. </span>
+          <span class="pi">-</span> <span class="s">db-backups:/dumps</span>
+        <span class="na">ports</span><span class="pi">:</span>
+          <span class="pi">-</span> <span class="s2">"</span><span class="s">7474:7474"</span>
+          <span class="pi">-</span> <span class="s2">"</span><span class="s">7687:7687"</span>
+        <span class="na">env_file</span><span class="pi">:</span>
+          <span class="pi">-</span> <span class="s">.env</span>
+
+<span class="na">volumes</span><span class="pi">:</span>
+    <span class="na">db-backups</span><span class="pi">:</span>
+      <span class="na">driver</span><span class="pi">:</span> <span class="s">local</span>
+      <span class="na">driver_opts</span><span class="pi">:</span>
+        <span class="na">type</span><span class="pi">:</span> <span class="s">nfs</span>
+        <span class="na">o</span><span class="pi">:</span> <span class="s">nfsvers=4,addr=${nfsIP},nolock,soft,rw</span>
+        <span class="na">device</span><span class="pi">:</span> <span class="s">$nfsPath</span>
+</code></pre></div></div>
+
+<p>Unfortunately, we are so far unable to find a method for starting the <code class="language-plaintext highlighter-rouge">cron</code> service that operationally runs the backups within the <code class="language-plaintext highlighter-rouge">Dockerfile</code> without breaking Neo4j. To address this, we use a deploy script that starts the container and then starts <code class="language-plaintext highlighter-rouge">cron</code> after the container is stood up:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+<span class="c"># Get latest changes</span>
+git pull origin main
+<span class="c"># Start docker containers</span>
+docker compose up <span class="nt">--build</span> <span class="nt">-d</span>
+<span class="c"># Start cron</span>
+docker <span class="nb">exec</span> <span class="nt">-it</span> neo4j service cron start
+<span class="c"># Make sure Neo4j is running</span>
+docker <span class="nb">exec</span> <span class="nt">-it</span> neo4j neo4j start
+</code></pre></div></div>
+
+<h1 id="restoring-the-database">Restoring the Database</h1>
+<p>Now, if the data get deleted, your server crashes, or anything else happens to your data, you have a backup that can be used to restore the database. To restore the database, you just have to run the <code class="language-plaintext highlighter-rouge">neo4j-admin load</code> command before deploying the database with docker compose:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run <span class="nt">--interactive</span> <span class="nt">--tty</span> <span class="nt">--rm</span> <span class="se">\</span>
+    <span class="nt">--volume</span><span class="o">=</span>path/to/data/in/docker-compose:/data <span class="se">\ </span>
+    <span class="nt">--volume</span><span class="o">=</span>path/to/dumps/in/docker-compose:/dumps <span class="se">\ </span>
+    neo4j:4.4.8 <span class="se">\</span>
+    neo4j-admin load <span class="nt">--database</span><span class="o">=</span>neo4j <span class="nt">--from</span><span class="o">=</span>/dumps/&lt;name_of_latest_backup&gt;.dump
+</code></pre></div></div>
+<p>Running the above command reads the latest <code class="language-plaintext highlighter-rouge">.dump</code> file and puts the data into the <code class="language-plaintext highlighter-rouge">/data</code> folder in a format that is readable by Neo4j. After running this command, running the above deploy script will stand up the database with data from the latest backup!</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#backup" class="page__taxonomy-item p-category" rel="tag">Backup</a><span class="sep">, </span>
+    
+      <a href="/tags/#docker" class="page__taxonomy-item p-category" rel="tag">Docker</a><span class="sep">, </span>
+    
+      <a href="/tags/#how-to" class="page__taxonomy-item p-category" rel="tag">How to</a><span class="sep">, </span>
+    
+      <a href="/tags/#neo4j" class="page__taxonomy-item p-category" rel="tag">Neo4j</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#code" class="page__taxonomy-item p-category" rel="tag">Code</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2022-08-19T00:00:00-06:00">August 19, 2022</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Backing+up+a+Dockerized+Community+Edition+Neo4j+Database%20https%3A%2F%2Fclimate.umt.edu%2Fcode%2F2022%2F08%2F19%2Fbackup-neo4j.html" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fclimate.umt.edu%2Fcode%2F2022%2F08%2F19%2Fbackup-neo4j.html" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://climate.umt.edu/code/2022/08/19/backup-neo4j.html" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/hardware/2022/08/05/envirocam-setup.html" class="pagination--pager" title="Configuring an EnviroCams PTZ Camera
+">Previous</a>
+    
+    
+      <a href="/guides/2023/10/27/utm-arcgis.html" class="pagination--pager" title="How to Set Up UTM and ArcGIS on a Mac
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    
+<div class="page__related">
+  
+  <h2 class="page__related-title">You may also enjoy</h2>
+  <div class="grid__wrapper">
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/hardware/2024/07/29/cskt-purpleair.html" rel="permalink">Montana Climate Office Introduces the CSKT PurpleAir Air Quality Sensor Network
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">The Confederated Salish &amp; Kootenai Tribes (CSKT) and the Montana Climate Office (MCO) are excited to announce the launch of the CSKT PurpleAir Air Qualit...</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/guides/2023/10/27/utm-arcgis.html" rel="permalink">How to Set Up UTM and ArcGIS on a Mac
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Below is a tutorial on how to spin up a Windows virtual machine and install ArcGIS on the new Mac machines with Apple Silicon chips.
+
+</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/hardware/2022/08/05/envirocam-setup.html" rel="permalink">Configuring an EnviroCams PTZ Camera
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">As part of Upper Missouri River Basin Plains Snowpack and Soil Moisture Monitoring program, daily photos are provided from each mesonet station. At the Monta...</p>
+  </article>
+</div>
+
+    
+  </div>
+</div>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+    <ul class="social-icons">
+      
+        <li><strong>Follow:</strong></li>
+      
+  
+      
+        
+          
+            <li><a href="https://github.com/mt-climate-office" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+          
+        
+          
+            <li><a href="mailto:state.climatologist@umontana.edu" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+          
+        
+          
+            <li><a href="https://twitter.com/mt_climate" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+          
+        
+      
+  
+      
+        <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+      
+    </ul>
+  </div>
+
+<!-- <div class="page__footer-test">
+    <strong>Contact Information: </strong><br>
+    Montana Climate Office <br> Montana Forest & Conservation Experiment Station <br> University of Montana <br> 32 Campus Drive <br> Missoula, MT 59812 <br> Phone: (406) 243-6793 <br> <a href="mailto:state.climatologist@umontana.edu">state.climatologist@umontana.edu</a> <br>
+</div>
+<br> -->
+<div class="page__footer-copyright">&copy; 2024 Montana Climate Office. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+      </footer>
+    </div>
+
+    		
+ <script type="text/javascript" async
+ src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+</script>
+
+
+
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+  <!-- Google tag (gtag.js) --> 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-96RBQYREG6"></script> 
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}   gtag('js', new Date());
+    gtag('config', 'G-96RBQYREG6');
+</script>
+
+
+
+
+
+
+
+  </body>
+</html>

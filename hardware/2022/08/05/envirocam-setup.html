@@ -1,0 +1,740 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.26.2 by Michael Rose
+  Copyright 2013-2024 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="en-US" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Configuring an EnviroCams PTZ Camera - Montana Climate Office</title>
+<meta name="description" content="As part of Upper Missouri River Basin Plains Snowpack and Soil Moisture Monitoring program, daily photos are provided from each mesonet station. At the Montana Climate Office, we use EnviroCams iPatrol PTZ cameras to take these photos at each station. These cameras are great to have in the field because they take quality photos and are able to operate in the extreme heat and cold seen across Montana. However, the documentation that comes with the camera is very lacking, making it difficult for new users to get the cameras setup for their needs. Below is an overview of how we setup our cameras in hopes that it can help others with their setup process. This tutorial assumes the camera is in a remote setting and is connected to the internet via a cell modem with a static I.P. address.">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Montana Climate Office">
+<meta property="og:title" content="Configuring an EnviroCams PTZ Camera">
+<meta property="og:url" content="https://climate.umt.edu/hardware/2022/08/05/envirocam-setup.html">
+
+
+  <meta property="og:description" content="As part of Upper Missouri River Basin Plains Snowpack and Soil Moisture Monitoring program, daily photos are provided from each mesonet station. At the Montana Climate Office, we use EnviroCams iPatrol PTZ cameras to take these photos at each station. These cameras are great to have in the field because they take quality photos and are able to operate in the extreme heat and cold seen across Montana. However, the documentation that comes with the camera is very lacking, making it difficult for new users to get the cameras setup for their needs. Below is an overview of how we setup our cameras in hopes that it can help others with their setup process. This tutorial assumes the camera is in a remote setting and is connected to the internet via a cell modem with a static I.P. address.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2022-08-05T00:00:00-06:00">
+
+
+
+
+
+
+<link rel="canonical" href="https://climate.umt.edu/hardware/2022/08/05/envirocam-setup.html">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Montana Climate Office Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script type="text/javascript">
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <link rel="shortcut icon" href="/assets/images/favicon.ico">
+  </head>
+
+  <body class="layout--single" dir="ltr">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/MCO_logo_icon_only.png" alt="Montana Climate Office"></a>
+        
+        <a class="site-title" href="/">
+          Montana Climate Office
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/mesonet/"
+                
+                
+              >Mesonet</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/drought/"
+                
+                
+              >Drought</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/climate/"
+                
+                
+              >Climate</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/posts/"
+                
+                
+              >News</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/research/"
+                
+                
+              >Research</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/projects/"
+                
+                
+              >Projects</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/about/"
+                
+                
+              >About</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="https://climate.umt.edu/">
+        <img src="/assets/images/brust.jpg" alt="" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="https://climate.umt.edu/" itemprop="url"></a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>Colin develops and maintains the API, dashboard and database for the Montana Mesonet.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+        
+          
+            <li><a href="mailto:colin.brust@mso.umt.edu" rel="nofollow noopener noreferrer me"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span></a></li>
+          
+        
+          
+            <li><a href="https://github.com/colinbrust" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Configuring an EnviroCams PTZ Camera">
+    <meta itemprop="description" content="As part of Upper Missouri River Basin Plains Snowpack and Soil Moisture Monitoring program, daily photos are provided from each mesonet station. At the Montana Climate Office, we use EnviroCams iPatrol PTZ cameras to take these photos at each station. These cameras are great to have in the field because they take quality photos and are able to operate in the extreme heat and cold seen across Montana. However, the documentation that comes with the camera is very lacking, making it difficult for new users to get the cameras setup for their needs. Below is an overview of how we setup our cameras in hopes that it can help others with their setup process. This tutorial assumes the camera is in a remote setting and is connected to the internet via a cell modem with a static I.P. address.">
+    <meta itemprop="datePublished" content="2022-08-05T00:00:00-06:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="https://climate.umt.edu/hardware/2022/08/05/envirocam-setup.html" itemprop="url">Configuring an EnviroCams PTZ Camera
+</a>
+          </h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>As part of Upper Missouri River Basin Plains Snowpack and Soil Moisture Monitoring program, daily photos are provided from each mesonet station. At the Montana Climate Office, we use <a href="https://www.envirocams.com/">EnviroCams</a> iPatrol PTZ cameras to take these photos at each station. These cameras are great to have in the field because they take quality photos and are able to operate in the extreme heat and cold seen across Montana. However, the documentation that comes with the camera is very lacking, making it difficult for new users to get the cameras setup for their needs. Below is an overview of how we setup our cameras in hopes that it can help others with their setup process. This tutorial assumes the camera is in a remote setting and is connected to the internet via a cell modem with a static I.P. address.</p>
+
+<p><strong>NOTE</strong>: Unfortunately, you need a Windows machine with Internet Explorer to fully configure the iPatrol camera. You are able to connect with a Mac/Linux machine and Firefox/Chrome, but some of the functionality is lacking. The latest <a href="https://www.envirocams.com/tech-support/#tab_firmware">firmware update</a> fixed some of these issues, but Internet Explorer is still the only browser that we have found supports all of the camera’s features.</p>
+
+<h1 id="configuring-the-camera">Configuring the Camera</h1>
+<h3 id="power-up-camera">Power Up Camera</h3>
+<ul>
+  <li>Plug camera into 12v DC power supply.</li>
+  <li>Connect camera to computer with ethernet cable.</li>
+</ul>
+
+<h3 id="adjust-computers-ip-settings">Adjust Computer’s I.P. Settings</h3>
+<ul>
+  <li>On your Windows machine, go to settings -&gt; Network and Internet -&gt; Ethernet -&gt; right-click -&gt; properties -&gt; double-click “Internet Protocol Version 4 (TCP/IPv4)”</li>
+  <li>Change:
+    <ul>
+      <li>IP address to 192.168.1.1</li>
+      <li>Subnet mask to 255.255.255.0</li>
+      <li>Default gateway to 192.168.1.1</li>
+    </ul>
+  </li>
+  <li><strong>NOTE</strong> Out of the box, the camera should have an I.P. address of 192.168.1.13. If for some reason the address is different, the first three numbers of theIPv4 address must match the first three number’s of the camera’s IP (in this case 192.168.1) in order to connect.</li>
+</ul>
+
+<h3 id="connect-to-camera-and-upload-firmware">Connect to Camera and Upload Firmware</h3>
+<ul>
+  <li>Connect the camera to the computer with an Ethernet cable.</li>
+  <li>Open Internet Explorer and go to https://192.168.1.13
+    <ul>
+      <li>This should open an EnviroCams login page.
+        <ul>
+          <li>At the bottom of the page, there should be a popup asking you to download the latest updates. Download and run the executable.</li>
+          <li>The camera should restart and the login page will reload.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Login with the default username (admin) and password (123456).</li>
+  <li>Update the camera’s firmware by navigationg to Setup &gt; System &gt; Maintenance &gt; Local Upgrade &gt; Browse…
+    <ul>
+      <li>Select the firmware file downloaded from the <a href="https://www.envirocams.com/tech-support/#tab_firmware">EnviroCams website</a>.</li>
+      <li>The firmware will take a few minutes to upload and apply. Once the changes are made, the camera should restart and you will be taken to the login screen.</li>
+      <li>When logging back in, you will be prompted to update your password.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="enable-communication-with-modem">Enable Communication with Modem</h3>
+<ul>
+  <li>Navigate to Setup -&gt; Network -&gt; Network. Change:
+    <ul>
+      <li>Obtain IP Address to “Static”</li>
+      <li>IP Address XXX.XXX.XXX.XXX (Here, the first three groups of numbers need to be the same as the first three groups of numbers of the modem’s local IP).</li>
+      <li>Subnet Mask to 255.255.255.0</li>
+      <li>Default Gateway to XXX.XXX.XXX.XXX (the same as the modem’s local IP).</li>
+      <li>Click ‘save’
+        <ul>
+          <li>This will reboot the camera and you will be logged out. You will need to repeat the IPv4 change steps above and set the ethernet adapter’s I.P. address, subnet mask and default gateway to accommodate the new I.P. address of the modem.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Login to Modem’s user interface (these steps will vary depending on the type of modem you have)
+    <ul>
+      <li>In your modem’s port forwarding settings:
+        <ul>
+          <li>Forward port 80 and from the camera’s local I.P. address and set the destination port to a port that is not in use (like 1234). Port 80 is already in use by most modems. Forwarding port 80 will allow access to the camera’s user interface remotely.</li>
+          <li>Forward port 554 from the camera’s local I.P. address. Port 554 is used for the ‘Real Time Streaming Protocol’ and allows the video feed from the camera to stream remotely.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Connect camera to the modem with an Ethernet cable and make sure both the camera and modem have power.
+    <ul>
+      <li>If everything is setup properly, you should be able to remotely access the camera’s user interface by navigating to http://{modem’s IP address}:{destination port you set above}.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="change-cameras-storage-settings">Change Camera’s Storage Settings</h3>
+<p>At the Montana Mesonet, we only use the camera for taking photos. If you need to take video, you will need to adjust the storage settings accordingly.</p>
+<ul>
+  <li>In the camera’s user interface, navigate to Setup &gt; Storage</li>
+  <li>Under “Allocate Capacity”, change “Video” to 0 and “Common Snapshot” to 29705 (or whatever number was originally in “Video”. Essentiall. We just want all the storage allocated to the “Common Snapshot”).
+    <ul>
+      <li>This will cause the camera to restart.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="setup-time-server">Setup Time Server</h3>
+<p>Setting up a time server will allow the camera to always have the correct timestamp on the images.</p>
+<ul>
+  <li>Navigate to Setup &gt; Common &gt; Time
+    <ul>
+      <li>First, click “Sync with Computer Time”</li>
+      <li>Change “Sync Mode” to “Sync with NTP Server”
+        <ul>
+          <li>Set the timezone based on the UTC offset.</li>
+          <li>Set NTP Server Address to time1.google.com</li>
+          <li>Set Port to 123.</li>
+          <li>Set Update interval to 1800 seconds.</li>
+        </ul>
+      </li>
+      <li>Save changes</li>
+    </ul>
+  </li>
+  <li>Setup Daylight Savings Offset
+    <ul>
+      <li>Navigate to Setup &gt; Common &gt; Time &gt; DST
+        <ul>
+          <li>Set ‘starts’ to 2nd Sunday of March at 02:00</li>
+          <li>Set ‘ends’ to 1st Sunday of November at 02:00</li>
+          <li>Save</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="adjust-the-cameras-preset-views">Adjust the Camera’s Preset Views</h3>
+<ul>
+  <li>Navigate to the Live View panel and click the play button in the bottom left corner. This should open up a live video feed from the camera.</li>
+  <li>To set a preset view, use the arrows on the camera to navigate to and focus on the desired area.
+    <ul>
+      <li>Click the plus button at the bottom right of the screen.</li>
+      <li>Add a name and number for the presets.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="set-the-cameras-patrol">Set the Camera’s Patrol</h3>
+<ul>
+  <li>Click the ‘Patrol’ tab on the right side of the Live View page.
+    <ul>
+      <li>Click ‘+’ to add a patrol, set:
+        <ul>
+          <li>Patrol No. -&gt; 1</li>
+          <li>Patrol Name -&gt; Default</li>
+          <li>Add desired locations from the preset views to the patrol.</li>
+        </ul>
+      </li>
+      <li>Schedule the patrol:
+        <ul>
+          <li>Click the tiny little button in the bottom right corner of the screen that has three circles with lines connecting them.
+            <ul>
+              <li>Click the checkbox on the top left to enable the patrol.</li>
+              <li>Under ‘Monday’ set the times of day you would like to do the patrol.</li>
+              <li>Select the ‘default’ patrol that was just created.</li>
+              <li>Click the ‘copy’ button and then paste it into each day of the week.</li>
+              <li>Click ‘OK’.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="enable-scheduled-snapshots">Enable Scheduled Snapshots</h3>
+<p>Unfortunately, the camera doesn’t automatically take photos when it arrives at preset positions. As such, our method is to take photos when we know the camera is at certain positions according to the patrol schedule.</p>
+
+<ul>
+  <li>Navigate to Setup &gt; Video &amp; Audio &gt; Snapshot</li>
+  <li>Set:
+    <ul>
+      <li>Snapshot -&gt; “On”</li>
+      <li>Snapshot Interval(s) -&gt; 1</li>
+      <li>Number to Snapshot -&gt; 1</li>
+      <li>Snapshot Mode -&gt; Schedule
+        <ul>
+          <li>Set times to match the patrol schedule.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Save changes.</li>
+</ul>
+
+<p>After configuring all these setting, your iPatrol camera should be ready for deployment!</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#envirocams" class="page__taxonomy-item p-category" rel="tag">EnviroCams</a><span class="sep">, </span>
+    
+      <a href="/tags/#ftp" class="page__taxonomy-item p-category" rel="tag">FTP</a><span class="sep">, </span>
+    
+      <a href="/tags/#how-to" class="page__taxonomy-item p-category" rel="tag">How to</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#hardware" class="page__taxonomy-item p-category" rel="tag">Hardware</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2022-08-05T00:00:00-06:00">August 5, 2022</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Configuring+an+EnviroCams+PTZ+Camera%20https%3A%2F%2Fclimate.umt.edu%2Fhardware%2F2022%2F08%2F05%2Fenvirocam-setup.html" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fclimate.umt.edu%2Fhardware%2F2022%2F08%2F05%2Fenvirocam-setup.html" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://climate.umt.edu/hardware/2022/08/05/envirocam-setup.html" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="#" class="pagination--pager disabled">Previous</a>
+    
+    
+      <a href="/code/2022/08/19/backup-neo4j.html" class="pagination--pager" title="Backing up a Dockerized Community Edition Neo4j Database
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    
+<div class="page__related">
+  
+  <h2 class="page__related-title">You may also enjoy</h2>
+  <div class="grid__wrapper">
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/hardware/2024/07/29/cskt-purpleair.html" rel="permalink">Montana Climate Office Introduces the CSKT PurpleAir Air Quality Sensor Network
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">The Confederated Salish &amp; Kootenai Tribes (CSKT) and the Montana Climate Office (MCO) are excited to announce the launch of the CSKT PurpleAir Air Qualit...</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/guides/2023/10/27/utm-arcgis.html" rel="permalink">How to Set Up UTM and ArcGIS on a Mac
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Below is a tutorial on how to spin up a Windows virtual machine and install ArcGIS on the new Mac machines with Apple Silicon chips.
+
+</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/code/2022/08/19/backup-neo4j.html" rel="permalink">Backing up a Dockerized Community Edition Neo4j Database
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Neo4j is a platform for managing graph databases. The Montana Climate Office uses Neo4j Community Edition to manage a database of satellite data associated w...</p>
+  </article>
+</div>
+
+    
+  </div>
+</div>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+    <ul class="social-icons">
+      
+        <li><strong>Follow:</strong></li>
+      
+  
+      
+        
+          
+            <li><a href="https://github.com/mt-climate-office" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+          
+        
+          
+            <li><a href="mailto:state.climatologist@umontana.edu" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+          
+        
+          
+            <li><a href="https://twitter.com/mt_climate" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+          
+        
+      
+  
+      
+        <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+      
+    </ul>
+  </div>
+
+<!-- <div class="page__footer-test">
+    <strong>Contact Information: </strong><br>
+    Montana Climate Office <br> Montana Forest & Conservation Experiment Station <br> University of Montana <br> 32 Campus Drive <br> Missoula, MT 59812 <br> Phone: (406) 243-6793 <br> <a href="mailto:state.climatologist@umontana.edu">state.climatologist@umontana.edu</a> <br>
+</div>
+<br> -->
+<div class="page__footer-copyright">&copy; 2024 Montana Climate Office. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+      </footer>
+    </div>
+
+    		
+ <script type="text/javascript" async
+ src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+</script>
+
+
+
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+  <!-- Google tag (gtag.js) --> 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-96RBQYREG6"></script> 
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}   gtag('js', new Date());
+    gtag('config', 'G-96RBQYREG6');
+</script>
+
+
+
+
+
+
+
+  </body>
+</html>

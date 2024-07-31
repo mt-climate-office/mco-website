@@ -1,0 +1,483 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.26.2 by Michael Rose
+  Copyright 2013-2024 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="en-US" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Feels Like Temperature Calculation - Montana Climate Office</title>
+<meta name="description" content="">
+
+
+  <meta name="author" content="Colin Brust">
+  
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Montana Climate Office">
+<meta property="og:title" content="Feels Like Temperature Calculation">
+<meta property="og:url" content="https://climate.umt.edu/mesonet/ag_tools/feels_like/">
+
+
+  <meta property="og:description" content="">
+
+
+
+  <meta property="og:image" content="https://climate.umt.edu/assets/images/mesonet_banner.jpg">
+
+
+
+
+
+
+
+
+
+
+<link rel="canonical" href="https://climate.umt.edu/mesonet/ag_tools/feels_like/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Montana Climate Office Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script type="text/javascript">
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <link rel="shortcut icon" href="/assets/images/favicon.ico">
+  </head>
+
+  <body class="layout--single wide" dir="ltr">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/MCO_logo_icon_only.png" alt="Montana Climate Office"></a>
+        
+        <a class="site-title" href="/">
+          Montana Climate Office
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/mesonet/"
+                
+                
+              >Mesonet</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/drought/"
+                
+                
+              >Drought</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/climate/"
+                
+                
+              >Climate</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/posts/"
+                
+                
+              >News</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/research/"
+                
+                
+              >Research</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/projects/"
+                
+                
+              >Projects</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/about/"
+                
+                
+              >About</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style=" background-image: url('/assets/images/mesonet_banner.jpg');"
+>
+  
+    <div class="wrapper">
+      <h1 id="page-title" class="page__title" itemprop="headline">
+        
+          Feels Like Temperature Calculation
+
+        
+      </h1>
+      
+        <p class="page__lead"><br />
+</p>
+      
+      
+
+
+      
+    </div>
+  
+  
+</div>
+
+
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+      
+      
+      
+      
+    
+    
+      <nav class="nav__list">
+  <h3 class="nav__title" style="padding-left: 0;">Mesonet Resources</h3>
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle menu</label>
+  <ul class="nav__items">
+    
+      
+      
+        <li>
+          
+            <a href="/mesonet/"><span class="nav__sub-title">Montana Mesonet Overview</span></a>
+          
+
+          
+          <ul>
+            
+              <li><a href="/mesonet/stations">Mesonet Stations</a></li>
+            
+              <li><a href="/mesonet/umrb/">UMRB Project</a></li>
+            
+              <li><a href="/mesonet/variables/">Variables Measured</a></li>
+            
+          </ul>
+          
+        </li>
+      
+        <li>
+          
+            <a href="/mesonet/ag_tools/"><span class="nav__sub-title">Agricultural Tools</span></a>
+          
+
+          
+          <ul>
+            
+              <li><a href="/mesonet/ag_tools/etr/">Reference ET</a></li>
+            
+              <li><a href="/mesonet/ag_tools/feels_like/" class="active">Feels Like Temperature</a></li>
+            
+              <li><a href="/mesonet/ag_tools/gdds/">Growing Degree Days</a></li>
+            
+              <li><a href="/mesonet/ag_tools/soil_profile/">Soil Profile Plots</a></li>
+            
+              <li><a href="/mesonet/ag_tools/risk/">Livestock Risk Index</a></li>
+            
+              <li><a href="/mesonet/ag_tools/swp/">Soil Water Potential</a></li>
+            
+          </ul>
+          
+        </li>
+      
+        <li>
+          
+            <a href="/mesonet/tutorials/"><span class="nav__sub-title">Montana Mesonet Tutorials</span></a>
+          
+
+          
+        </li>
+      
+        <li>
+          
+            <a href="/mesonet/api/"><span class="nav__sub-title">Montana Mesonet API</span></a>
+          
+
+          
+        </li>
+      
+        <li>
+          
+            <a href="/mesonet/qaqc/"><span class="nav__sub-title">Montana Mesonet QA/QC</span></a>
+          
+
+          
+        </li>
+      
+        <li>
+          
+            <a href="/mesonet/citation/"><span class="nav__sub-title">Montana Mesonet Citation</span></a>
+          
+
+          
+        </li>
+      
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Feels Like Temperature Calculation">
+    <meta itemprop="description" content="">
+    
+    
+
+    <div class="page__inner-wrap">
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>The “Feels Like” temperature is a combination of the heat index, wind chill, and air temperature. Wind chill combines the air temperature and wind speed to provide a real feel temperature when temperatures are less than 50°F and wind speed is greater than 3 mph<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>:</p>
+
+\[Wind Chill (°F) = 35.74 + 0.6215T -35.75(V^0.16)+0.4275T(V^0.16)\]
+
+<p>where T is the temperature in °F and V is wind speed in miles per hour. When temperatures are above 80 °F, the heat index is used to calculate the feels like temperature. The heat index combines temperature and relative humidity to provide a real feel temperature in warm conditions<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup>:</p>
+
+<p><span style="font-size: 0.45rem">
+\(HI = -42.379+2.04901523*T+10.14333127*RH-0.22475541*T*RH-0.00683783*T*T-0.05481717*RH*RH+0.00122874*T*T*RH+0.00085282*T*RH*RH-0.00000199*T*T*RH*RH\)
+</span></p>
+
+<p>where T is the temperature in °F and RH is the relative humidity expressed as percent. If RH is less than 13% and the temperature is between 80 and 112 °F, the following is subtracted from the HI value given above:</p>
+
+\[((13-RH)/4)*\sqrt{(17 - |T-95|)/17}\]
+
+<p>If RH is greater than 85% and the temperature is between 80 and 87°F, the following is added to the HI value given above:</p>
+
+\[((RH-85)/10)*((87-T)/5)\]
+
+<p>If the temperature, wind speed, or relative humidity don’t meet the criteria for calculating the wind chill or heat index, raw temperature is used to calculate the feels like temperature. Below is an example API call to access the feels like temperature:</p>
+
+<p><a href="https://mesonet.climate.umt.edu/api/derived/daily?stations=crowagen&amp;start_time=2023-12-01&amp;end_time=2023-12-15&amp;elements=feels_like&amp;premade=True">https://mesonet.climate.umt.edu/api/derived/daily?stations=crowagen&amp;start_time=2023-12-01&amp;end_time=2023-12-15&amp;elements=feels_like&amp;premade=True</a></p>
+<div style="width: 100%; height: 300px;"><iframe style="width: 100%; height: 300px;" src="https://mesonet.climate.umt.edu/api/derived/daily?stations=crowagen&amp;start_time=2023-12-01&amp;end_time=2023-12-15&amp;elements=feels_like&amp;premade=True" frameborder="0px"></iframe></div>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+      <p><a href="https://www.weather.gov/media/epz/wxcalc/windChill.pdf">https://www.weather.gov/media/epz/wxcalc/windChill.pdf</a> <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:2" role="doc-endnote">
+      <p><a href="https://www.wpc.ncep.noaa.gov/html/heatindex_equation.shtml">https://www.wpc.ncep.noaa.gov/html/heatindex_equation.shtml</a> <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+    <ul class="social-icons">
+      
+        <li><strong>Follow:</strong></li>
+      
+  
+      
+        
+          
+            <li><a href="https://github.com/mt-climate-office" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+          
+        
+          
+            <li><a href="mailto:state.climatologist@umontana.edu" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+          
+        
+          
+            <li><a href="https://twitter.com/mt_climate" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+          
+        
+      
+  
+      
+        <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+      
+    </ul>
+  </div>
+
+<!-- <div class="page__footer-test">
+    <strong>Contact Information: </strong><br>
+    Montana Climate Office <br> Montana Forest & Conservation Experiment Station <br> University of Montana <br> 32 Campus Drive <br> Missoula, MT 59812 <br> Phone: (406) 243-6793 <br> <a href="mailto:state.climatologist@umontana.edu">state.climatologist@umontana.edu</a> <br>
+</div>
+<br> -->
+<div class="page__footer-copyright">&copy; 2024 Montana Climate Office. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+      </footer>
+    </div>
+
+    		
+ <script type="text/javascript" async
+ src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+</script>
+
+
+
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+  <!-- Google tag (gtag.js) --> 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-96RBQYREG6"></script> 
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}   gtag('js', new Date());
+    gtag('config', 'G-96RBQYREG6');
+</script>
+
+
+
+
+
+
+
+  </body>
+</html>
