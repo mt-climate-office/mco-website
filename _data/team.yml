@@ -97,6 +97,15 @@
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:john.stapleton@umconnect.umt.edu"
 
+- name: "Adam Cook"
+  position: "Hydrologic Technician"
+  photo: "/assets/images/cook.jpg"
+  bio: "Adam helps to build, operate, and maintain the Montana Mesonet"
+  links:
+  - label: "Email"
+    icon: "fas fa-fw fa-envelope-square"
+    url: "mailto:adam.cook@mso.umt.edu"
+
 - name: "Will Kersey"
   position: "Hydrologic Technician"
   photo: "/assets/images/kersey.jpg"
